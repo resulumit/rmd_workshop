@@ -26,7 +26,7 @@ This repository holds the materials for a workshop on writing reproducible resea
 
     - a dataset created with the `fabricatr` package (Blair et al., 2019), imagined to explore the Google Scholar rankings of fictitious journals
     
-    - including the following variables:  
+    - includes the following variables 
         - **name**: journals (1090 random titles)
         - **origin**: geographic origins (five continents)
         - **branch**: major discipline of journals (four branches)
