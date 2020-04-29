@@ -4,7 +4,7 @@ output:
 ---
 
 <!-- title page items -->
-Journals: Random Words With Random Data
+Journals: Random Words With Random Data fg fhg fgh
 A Mock Paper for an R Markdown Workshop
 Jane Doe
 4 March 2020
