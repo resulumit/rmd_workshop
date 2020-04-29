@@ -2,8 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+
+*.Rproj
+*.docx
 presentation/*
 !presentation/rmd_workshop.pdf
-*html
-*.docx
-*.Rproj
+
