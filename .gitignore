@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+*.Rproj
+*.docx
+presentation/*
+!presentation/rmd_workshop.pdf
+
