@@ -12,7 +12,7 @@ This repository holds the materials for a workshop on writing reproducible resea
     - key sections in-need of attention are highlighted
 
 - `manuscript/journals.Rmd`
-    - an R Markdown document to work on
+    - an R Markdown document to work on during the workshop
         - includes unformatted text from `reproduce_this.pdf` to save time
         - major components, such as paragraphs and tables, are numbered and marked in comments to facilitate navigation
         
@@ -20,8 +20,7 @@ This repository holds the materials for a workshop on writing reproducible resea
     - a BibTeX document with three fabricated references
     
 - `manuscript/apa_7th.csl`
-    - a *Citation Style Language* document, with APA (7th Edition) referencing style (Wiernik, 2020)
-
+    - a Citation Style Language document, with APA (7th Edition) referencing style (Wiernik, 2020)
 
 - `data/journals.csv`
 
@@ -39,10 +38,10 @@ This repository holds the materials for a workshop on writing reproducible resea
         - **issues**: number of issues published per year (integers)
    
 
-- `google_scholar.png`
+- `image/google_scholar.png`
     - a screeenshot image of the Google Scholar homapage
 
-- `rmd_workshop.pdf`
+- `presentation/rmd_workshop.pdf`
     - slides in PDF format
     - HTML version is available at <https://resulumit.com/teaching/rmd_workshop.html>
         - offers, among others, the ability to scroll across long codes on some slides
@@ -54,4 +53,4 @@ Blair, G., Cooper, J., Coppock, A., Humphreys, M., Rudkin, A. and Fultz, N. (201
 
 Gagolewski, M. (2020). [stringi: Character String Processing Facilities](https://cran.r-project.org/web/packages/stringi/index.html). R package, version 1.4.6.
 
-Wiernik, B. M. (2020). [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand). Citation style language file, version 1.0.]
+Wiernik, B. M. (2020). [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand). Citation style language file, version 1.0.
