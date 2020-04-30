@@ -3,39 +3,24 @@
 This repository holds the materials for a workshop on writing reproducible research papers with R Markdown, first taught at [Campus Luzern](https://www.campus-luzern.ch/) in March 2020, revised in April 2020.
 
 
-## Substance
+## Contents
 
-The workshop is divided into nine parts, with an additional part on *colloboration* in the making. Most parts include exercises &mdash; 35 in total.
+The workshop is divided into ten parts, with Part 9 on *colloboration* is in the making. Most parts include exercises &mdash; 35 in total.
 
-**Part 1. Getting the Tools Ready**
-   - e.g., downloading course material
 
-**Part 2. Introducing R Markdown**
-   - e.g., creating a new document
+|[]() |      |
+|------|------|
+| **Part 1. Getting the Tools Ready** <br /> - e.g., downloading course material | **Part 6. Adding Code, Figures, and Tables** <br /> - e.g., plotting data | 
+| **Part 2. Introducing R Markdown** <br /> - e.g., creating a new document | **Part 7. Addressing Functionality Gaps** <br /> - e.g., adjusting line spacing | 
+| **Part 3. Setting Metadata** <br /> - e.g., defining output format | **Part 8. Using Version Control** <br /> - e.g., integrating Git and GitHub | 
+| **Part 4. Writing Text** <br /> - e.g., adding emphasis to text | **Part 9. Collaborating with Others** <br /> - e.g., working simultaneously with co-authors | 
+| **Part 5. Managing References** <br /> - e.g., citing sources | **Part 10. Working on a Real Project** <br /> - e.g., converting a work-in-progress of yours |
 
-**Part 3. Setting Metadata**
-   - e.g., defining output format
-
-**Part 4. Writing Text**
-   - e.g., adding emphasis to text
-
-**Part 5. Managing References**
-   - e.g., citing sources
-
-**Part 6. Adding Code, Figures, and Tables**
-   - e.g., plotting data
-
-**Part 7. Addressing Functionality Gaps**
-   - e.g., adjusting line spacing
-
-**Part 8. Using Version Control**
-   - e.g., integrating Git and GitHub
-
-**Part 9. Working on a Real Project**
-   - e.g., converting a work-in-progress of yours
    
 
 ##  Material
+
+Below are the workshop materials kept in this repository.
 
 - `manuscript/reproduce_this.pdf`
     - a document, formatted in Word but saved as PDF, to be re-created with R Markdown 
