@@ -123,7 +123,7 @@ There are observations in the dataset. Egestas nullam, et mauris inceptos sed sc
 <!-- figure 2 -->
 
 <!-- paragraph 22 -->
-Ultrices a2 = b2 + c2 laoreet sollicitudin tellus potenti lacinia mauris ut iaculis. Torquent egestas augue nunc est scelerisque ut. Amet sapien vestibulum gravida tincidunt id justo vestibulum porttitor. Pellentesque tellus vitae, libero maecenas ligula lorem, rutrum. Sit, fermentum dictum magna ac? Montes, vivamus taciti donec vitae sapien integer. Aliquet cubilia in turpis hendrerit ac! Elit ut, finibus. Primis molestie euismod vel, sem mauris orci iaculis et. Lobortis nisi id blandit tempus, et tristique et. Elementum tincidunt ut nisl pellentesque sed dictumst nisi. Ultricies eros velit erat euismod, nulla odio aliquam. Dictum mi amet porttitor ultricies sagittis elementum erat. Non, adipiscing tempor. Id mauris non nisl eros quisque? Ultrices rhoncus non risus mauris est nunc:
+Ultrices a2 = b2 + c2 laoreet sollicitudin tellus potenti lacinia mauris ut iaculis. Torquent egestas augue nunc est scelerisque ut. Amet sapien vestibulum gravida tincidunt id justo vestibulum porttitor. Pellentesque tellus vitae, libero maecenas ligula lorem, rutrum. Sit, fermentum dictum magna ac? Montes, vivamus taciti donec vitae sapien integer. Aliquet cubilia in turpis hendrerit ac! Elit ut, finibus. Primis molestie euismod vel, sem mauris orci iaculis et. Lobortis nisi id blandit tempus, et tristique et. Elementum tincidunt ut nisl pellentesque sed dictumst nisi. Ultricies eros velit erat euismod, nulla odio aliquam. Dictum mi amet porttitor ultricies sagittis elementum erat. Non, adipiscing tempor. Id mauris non nisl eros quisque? Ultrices rhoncus non risus mauris est nunc Equation 1:
 
 <!-- block equation -->
 Yi = a + bXi + ei
