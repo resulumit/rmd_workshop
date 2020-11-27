@@ -62,6 +62,15 @@ Below are the workshop materials kept in this repository.
     - slides in PDF format
     - HTML version is available at <https://resulumit.com/teaching/rmd_workshop.html>
         - offers, among others, the ability to scroll across long codes on some slides
+        
+- `test/run_this.R`
+    - an R script that 
+        - installs the packages needed for the workshop
+        - attempts to knit an R Markdown into PDF file
+    - useful for tasking participants with a pre-workshop setup
+        
+- `test/the_test.Rmd`
+    - an R Markdown file, to be used for the attempt in `run_this.R`
 
  
 ## References
