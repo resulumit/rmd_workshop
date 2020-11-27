@@ -1,11 +1,11 @@
 # Writing Reproducible Research Papers with R Markdown
 
-This repository holds the materials for a workshop on writing reproducible research papers with R Markdown, first taught at [Campus Luzern](https://www.campus-luzern.ch/) in March 2020, revised in April 2020.
+This repository holds the materials for a workshop on writing reproducible research papers with R Markdown, first taught at [Campus Luzern](https://www.campus-luzern.ch/) in March 2020.
 
 
 ## Contents
 
-The workshop is divided into ten parts, with Part 9 on *colloboration* is in the making. Most parts include exercises &mdash; 35 in total.
+The workshop is divided into ten parts. Most parts include exercises &mdash; 40+ in total.
 
 
 |[]() |      |
