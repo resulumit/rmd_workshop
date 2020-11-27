@@ -22,24 +22,24 @@ The workshop is divided into ten parts, with Part 9 on *colloboration* is in the
 
 Below are the workshop materials kept in this repository.
 
-- `manuscript/reproduce_this.pdf`
+- `manuscript\reproduce_this.pdf`
     - a document, formatted in Word but saved as PDF, to be re-created with R Markdown 
     - random sentences in the document are generated with the `stringi` package  (Gagolewski, 2020)
     - figures and tables are based on a fabricated dataset (`journals.csv`, see below)
     - key sections in-need of attention are highlighted
 
-- `manuscript/journals.Rmd`
+- `manuscript\journals.Rmd`
     - an R Markdown document to work on during the workshop
         - includes unformatted text from `reproduce_this.pdf` to save time
         - major components, such as paragraphs and tables, are numbered and marked in comments to facilitate navigation
         
-- `manuscript/references.bib` 
+- `manuscript\references.bib` 
     - a BibTeX document with three fabricated references
     
-- `manuscript/apa_7th.csl`
+- `manuscript\apa_7th.csl`
     - a Citation Style Language document, with APA (7th Edition) referencing style (Wiernik, 2020)
 
-- `data/journals.csv`
+- `data\journals.csv`
 
     - a dataset created with the `fabricatr` package (Blair et al., 2019), imagined to explore the Google Scholar rankings of fictitious journals
     
@@ -55,22 +55,22 @@ Below are the workshop materials kept in this repository.
         - **issues**: number of issues published per year (integers)
    
 
-- `image/google_scholar.png`
+- `image\google_scholar.png`
     - a screeenshot image of the Google Scholar homapage
 
-- `presentation/rmd_workshop.pdf`
+- `presentation\rmd_workshop.pdf`
     - slides in PDF format
     - HTML version is available at <https://resulumit.com/teaching/rmd_workshop.html>
         - offers, among others, the ability to scroll across long codes on some slides
         
-- `test/run_this.R`
+- `test\run_this.R`
     - an R script that 
         - installs the packages needed for the workshop
         - attempts to knit an R Markdown into PDF file
     - useful for tasking participants with a pre-workshop setup
         
-- `test/the_test.Rmd`
-    - an R Markdown file, to be used for the attempt in `run_this.R`
+- `test\the_test.Rmd`
+    - an R Markdown file, to be used for the attempt in `test\run_this.R`
 
  
 ## References
