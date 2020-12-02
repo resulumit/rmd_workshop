@@ -57,12 +57,15 @@ Below are the workshop materials kept in this repository.
    
 
 - `image\google_scholar.png`
-    - a screeenshot image of the Google Scholar homapage
+    - a screeenshot image of the Google Scholar homapage, copyright Google, LLC 
 
 - `presentation\rmd_workshop.pdf`
     - slides in PDF format
     - HTML version is available at <https://resulumit.com/teaching/rmd_workshop.html>
         - offers, among others, the ability to scroll across long codes on some slides
+
+- `presentation\rmd_workshop.Rmd`
+    - an R Markdown file behind the slides, produced with the `xaringan` package (Xie, 2020)
         
 - `test\run_this.R`
     - an R script that 
@@ -81,3 +84,5 @@ Blair, G., Cooper, J., Coppock, A., Humphreys, M., Rudkin, A. and Fultz, N. (201
 Gagolewski, M. (2020). [stringi: Character String Processing Facilities](https://cran.r-project.org/web/packages/stringi/index.html). R package, version 1.4.6.
 
 Wiernik, B. M. (2020). [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand). Citation style language file, version 1.0.
+
+Xie, Y. (2020). [xaringan: Presentation Ninja](https://cran.r-project.org/web/packages/xaringan/index.html). R package, version 0.18.
