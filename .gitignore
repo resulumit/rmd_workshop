@@ -6,5 +6,6 @@
 *.Rproj
 *.docx
 presentation/*
+!presentation/rmd_workshop.Rmd
 !presentation/rmd_workshop.pdf
 
