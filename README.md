@@ -2,7 +2,7 @@
 
 This repository holds the materials for a workshop on writing reproducible research papers with R Markdown, first taught at [Campus Luzern](https://www.campus-luzern.ch/) in March 2020.
 
-Unless otherwise noted, all content is copyright Resul Umit, licensed [CC-BY-SA 3.0](https://github.com/resulumit/rmd_workshop/blob/master/LICENCE.md). An easy to read summary of this permissive licence is available on the [Creative Commons website](https://creativecommons.org/licenses/by-sa/3.0/).
+Unless otherwise noted, all material is copyright Resul Umit, licensed [CC-BY-SA 3.0](https://github.com/resulumit/rmd_workshop/blob/master/LICENCE.md). An easy to read summary of this permissive licence is available on the [Creative Commons website](https://creativecommons.org/licenses/by-sa/3.0/).
 
 ## Contents
 
