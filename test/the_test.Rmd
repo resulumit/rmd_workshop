@@ -1,5 +1,0 @@
----
-title: "**Congradulations --- It has worked!**"
----
-
-# Your machiene can transform R Markdown into PDF files. You can therefore proceed with the workshop.
