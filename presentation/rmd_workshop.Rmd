@@ -410,28 +410,27 @@ class: inverse, center, middle
 ---
 ## Course Materials &mdash; Overview
 
-Materials, available at <https://github.com/resulumit/rmd_workshop>, have the following structure
-
+Materials, available at <https://github.com/resulumit/rmd_workshop/tree/materials>, have the following structure
 
 ```
-rmd_workshop
+
+rmd_workshop-materials
    |
    |- manuscript
+   |  |
+   |  |- reproduce_this.pdf
    |  |- journals.Rmd
-   |  |- ...
+   |  |- references.bib
+   |  |- apa_7th.csl
    |
    |-data
+   |  |
    |  |- journals.csv
    |
    |-image
+   |  |
    |  |- google_scholar.png
-   |
-   |-presentation
-   |  |- rmd_workshop.pdf
-   |
-   |-test
-   |  |- run_this.R
-   |  |- ...
+   
    
 ```
 
@@ -441,7 +440,7 @@ class: action
 
 ## Course Materials &mdash; Download from the Internet
 
-- Download the materials from <https://github.com/resulumit/rmd_workshop>
+- Download the materials from <https://github.com/resulumit/rmd_workshop/tree/materials>
 
   - on the webpage, follow
 
@@ -449,7 +448,7 @@ class: action
 
 <br>
 
-- Unzip and rename the folder, remove two files
+- Unzip and rename the folder
 
   - unzip to a location that is not synced
      - e.g., perhaps Documents, but not Dropbox
@@ -457,9 +456,6 @@ class: action
   - rename the folder as `YOURNAME-rmd`
      - e.g., `resul-rmd`
      - this will come handy in Part 9
-  
-  - delete `.gitignore` and `README.md`
-     - these are specific to my repository
   
 ---
 ## Course Materials &mdash; Contents
@@ -523,28 +519,7 @@ class: action
 
 - `image\google_scholar.png`
 
-    - a screeenshot image of the [Google Scholar homapage](https://scholar.google.ch/) 
-
---
-
-- `presentation\rmd_workshop.pdf`
-
-    - these slides in PDF format
-    - HTML version is available at <https://resulumit.com/teaching/rmd_workshop.html>
-        - offers, among others, the ability to scroll across long codes on some slides
-
---
-
-- `test\run_this.R`
-    - an R script that 
-        - installs the packages needed for the workshop
-        - attempts to knit an R Markdown into PDF file
-    - useful for tasking participants with a pre-workshop setup
-
---
-        
-- `test\the_test.Rmd`
-    - an R Markdown file, to be used for the attempt in `test\run_this.R`
+    - a screeenshot image of the [Google Scholar homapage](https://scholar.google.ch/)
 
 ---
 class: action
