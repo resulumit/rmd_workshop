@@ -108,7 +108,7 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 .footnote[
 
-[Skip intro &mdash; To the contents slide](#contents-slide).
+[Skip intro &mdash; To the contents slide.](#contents-slide) | <a href="mailto:resuluy@uio.no?subject=R Markdown workshop">Can I teach this workshop at your institution? Let's talk!</a>
 
 ]
 
