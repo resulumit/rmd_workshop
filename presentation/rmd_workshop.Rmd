@@ -1472,7 +1472,7 @@ Spaces in lines starting with a vertical line .yellow-h[|] are kept
 ---
 ## Syntax &mdash; Block Quotes
 
-Lines starting with the grater-than sign .yellow-h[&#62;] introduce block quotes
+Lines starting with the greater-than sign .yellow-h[&#62;] introduce block quotes
 
 ```{r, eval=FALSE}
 > In God, we trust. All others must bring data. 
@@ -4329,7 +4329,7 @@ Version control with Git and GitHub requires
 
 1. .yellow-h[initial setup], done once<sup>*</sup>
     - unless for a new computer or, if ever, a new GitHub account
-    - a bit technical, but worth the hussle
+    - a bit technical, but worth the hassle
     
 2. .yellow-h[project setup], repeated for every paper
     - shorter, less complicated
