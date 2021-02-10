@@ -423,11 +423,11 @@ rmd_workshop-materials
    |  |- references.bib
    |  |- apa_7th.csl
    |
-   |-data
+   |- data
    |  |
    |  |- journals.csv
    |
-   |-image
+   |- image
    |  |
    |  |- google_scholar.png
    
