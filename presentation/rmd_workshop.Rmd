@@ -4836,7 +4836,7 @@ class: inverse, center, middle
 ---
 ## Collaboration &mdash; Git and GitHub &mdash; Project Setup &mdash; Owner
 
-1) The setup for the owner is largely the same as in any single-author, single-computer senario
+1) The setup for the owner is largely the same as in any single-author, single-computer scenario
 - following the instructions on [this slide](#rstudio-project) forward
     - to introduce version control to a local project with Git,
     - to create a remote repository for that project on GitHub, and
@@ -4846,7 +4846,7 @@ class: inverse, center, middle
 --
 
 2) As an additional step, the owner needs to invite their collaborator(s) to the project
-- following, from the relavant GitHub repository, 
+- following, from the relevant GitHub repository, 
 
 > `Settings -> Manage access -> Invite a collaborator`
 
@@ -4859,7 +4859,7 @@ class: inverse, center, middle
 - subject to acceptance of the invitation
     - invitations are available directly at <https://github.com/notifications>, but also sent via email
     - with an option to "Accept invitation"
-    - on aceptance, projects appear among the repositories of the collaborator
+    - on acceptance, projects appear among the repositories of the collaborator
         
 --
 
@@ -4902,14 +4902,14 @@ class: action
 
 - on the Git tab in RStudio, click `Pull` to move the up-to-date records from GitHub to your computer
     - if your collaborator has not pushed anything since your last pull, you will be noticed that `Already up-to-date`.
-    - colloborative projects require pulling as well as pushing because your colloborator(s) might have pushed their commits to GitHub
+    - collaborative projects require pulling as well as pushing because your collaborator(s) might have pushed their commits to GitHub
     - pulling frequently minimises the risk of merge conflicts
 
 --
 
 2) Edit and save; commit and push
 
-- the same procedure as in any single-author, single-computer senario
+- the same procedure as in any single-author, single-computer scenario
     - as described on [this slide](#git-github-basic-workflow) forward
 - pushing frequently minimises the risk of merge conflicts
 
@@ -4923,7 +4923,7 @@ class: action
 - take in turns with your partner to work on the same document (of the same project)
     - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
     - *owner and collaborator*: observe the changes, if any, on your own `.Rmd` file, and/or on your GitHub repository
-        - click on the relavant commit message on GitHub and observe the commit
+        - click on the relevant commit message on GitHub and observe the commit
     - *collaborator*: pull, revert the header back to original, save, commit, and push
 
 `r countdown(minutes = 5, seconds = 00, top = 0)`
@@ -4932,7 +4932,7 @@ class: action
 
 - notice that you have not encountered any errors and/or merge conflicts
     - because everyone edited and merged with an up-to-date document
-    - this is the default senario in single-author, multiple computer senario
+    - this is the default scenario in single-author, multiple computer scenario
 
 ---
 class: action
@@ -4944,7 +4944,7 @@ class: action
 - work on the same document at the same time
     - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
     - *collaborator*: edit the second header in the document (i.e., "Including Plots"), save, commit, and push
-        - observe the error message that the last pusher will recieve, follow the instructions on RStudio to solve the problem
+        - observe the error message that the last pusher will receive, follow the instructions on RStudio to solve the problem
 
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
@@ -4964,7 +4964,7 @@ class: action
 - work on the same document at the same time
     - *owner*: edit the first header in the document again, save, commit, and push
     - *collaborator*: edit the first header in the document as well, save, commit, and push
-        - observe the error message that the last pusher will recieve, follow the instructions on RStudio to solve the problem
+        - observe the error message that the last pusher will receive, follow the instructions on RStudio to solve the problem
 
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
@@ -4985,7 +4985,7 @@ class: action
     - not easy, albeit still possible, to see the edits of the collaborators
     - not clear who is in charge of the overall progress
     - not possible to discuss edits
-    - not possible to comprimise on conflicting edits
+    - not possible to compromise on conflicting edits
 
 --
 
@@ -5008,7 +5008,7 @@ class: action
 
 2) Edit and save; commit and push
 
-- the same procedure as in any single-author, single-computer senario
+- the same procedure as in any single-author, single-computer scenario
     - as described on [this slide](#git-github-basic-workflow) forward
 - notice, on GitHub, that your commit is in the new branch, while *master* remains unchanged
 
@@ -5147,7 +5147,7 @@ Zhu, H. (2019). [kableExtra: Construct Complex Table with 'kable' and Pipe Synta
 class: middle, center
 
 ## The workshop ends here.
-## Congradulations for making it this far, and
+## Congratulations for making it this far, and
 ## thank you for joining me!
 
 .footnote[
