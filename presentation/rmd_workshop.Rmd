@@ -1,8 +1,4 @@
 ---
-title: "Writing Reproducible Research Papers with R Markdown"
-subtitle: "Resul Umit"
-institute: ""
-date: "November 2020"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -14,7 +10,7 @@ output:
       ratio: "16:9"
     seal: false
 ---
-
+name: title-slide
 class: inverse, center, middle
 
 ```{r setup, include=FALSE}
@@ -5155,3 +5151,9 @@ class: middle, center
 [Back to the contents slide](#contents-slide).
 
 ]
+
+```{r, print, eval=FALSE, echo=FALSE, message=FALSE}
+
+pagedown::chrome_print("rmd_workshop.html", output = "rmd_workshop.pdf")
+
+```
