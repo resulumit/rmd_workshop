@@ -929,7 +929,7 @@ Variables can take strings, options, sub-options, and .yellow-h[code]
 ```{r, eval = FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
-date: "`r format(Sys.Date(), '%d %B %Y')`"      #<<
+date: "\`r format(Sys.Date(), '%d %B %Y')`"      #<<
 output: 
     pdf_document:
         keep_tex: true                    
@@ -1266,7 +1266,7 @@ Variables can take code as well
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"
-date: "`r format(Sys.Date(), '%d %B %Y')`"  #<<
+date: "\`r format(Sys.Date(), '%d %B %Y')`"  #<<
 bibliography: references.bib
 csl: apa_7th.csl   
 output: pdf_document
@@ -1295,7 +1295,7 @@ Variables can take code as well
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"
-date: "`r format(Sys.Date(), '%d %B %Y')`"  #<<
+date: "\`r format(Sys.Date(), '%d %B %Y')`"  #<<
 bibliography: references.bib
 csl: apa_7th.csl   
 output: pdf_document
@@ -1331,7 +1331,7 @@ Code and text can be combined in a string
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"
-date: "First version: 4 March 2020. This version: `r format(Sys.Date(), '%d %B %Y')`."  #<<
+date: "First version: 4 March 2020. This version: \`r format(Sys.Date(), '%d %B %Y')`."  #<<
 bibliography: references.bib
 csl: apa_7th.csl   
 output: pdf_document
