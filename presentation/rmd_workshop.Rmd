@@ -24,7 +24,7 @@ library(stargazer)
 library(countdown)
 
 # data
-df <- read.csv("rmd_workshop_files/images_data/journals.csv") %>% 
+df <- read.csv("../data/journals.csv") %>% 
       mutate(subfield = as.factor(subfield), 
              english = as.factor(english),
              age = 2020 - since) %>%
@@ -721,7 +721,7 @@ Observe also that the document has three components
 ]
 
 .pull-right-c[
-![](rmd_workshop_files/images_data/yaml.png)
+![](../image/yaml.png)
 ]
 
 ---
@@ -736,8 +736,8 @@ Observe also that the document has three components
 ]
 
 .pull-right-c[
-![](rmd_workshop_files/images_data/yaml.png)
-![](rmd_workshop_files/images_data/text.png)
+![](../image/yaml.png)
+![](../image/text.png)
 ]
 
 ---
@@ -754,9 +754,9 @@ Observe also that the document has three components
 ]
 
 .pull-right-c[
-![](rmd_workshop_files/images_data/yaml.png)
-![](rmd_workshop_files/images_data/text.png)
-![](rmd_workshop_files/images_data/chunk.png)
+![](../image/yaml.png)
+![](../image/text.png)
+![](../image/chunk.png)
 ]
 
 ---
@@ -776,7 +776,7 @@ class: action
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
+knitr::include_graphics("../image/first_rmd.png")
 ```
 
 ]
@@ -956,7 +956,7 @@ output: html_document #<<
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml_html.png")
+knitr::include_graphics("../image/yaml_html.png")
 ```
 
 ]
@@ -982,7 +982,7 @@ output: latex_document #<<
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml_latex.png")
+knitr::include_graphics("../image/yaml_latex.png")
 ```
 
 ]
@@ -1009,7 +1009,7 @@ output: pdf_document #<<
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml_pdf.png")
+knitr::include_graphics("../image/yaml_pdf.png")
 ```
 
 ]
@@ -1037,7 +1037,7 @@ output: word_document #<<
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
+knitr::include_graphics("../image/yaml_word.png")
 ```
 
 ]
@@ -1096,7 +1096,7 @@ output: pdf_document
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml_pdf.png")
+knitr::include_graphics("../image/yaml_pdf.png")
 ```
 
 ]
@@ -1122,7 +1122,7 @@ output: pdf_document
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml2.png")
+knitr::include_graphics("../image/yaml2.png")
 ```
 
 ]
@@ -1149,7 +1149,7 @@ output: pdf_document
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml3.png")
+knitr::include_graphics("../image/yaml3.png")
 ```
 
 ]
@@ -1211,7 +1211,7 @@ output:                   #<<
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "100%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml4.png")
+knitr::include_graphics("../image/yaml4.png")
 ```
 
 ]
@@ -1278,7 +1278,7 @@ output: pdf_document
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml5.png")
+knitr::include_graphics("../image/yaml5.png")
 ```
 
 ]
@@ -1343,7 +1343,7 @@ output: pdf_document
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/yaml6.png")
+knitr::include_graphics("../image/yaml6.png")
 ```
 
 ]
@@ -2046,7 +2046,7 @@ class: inverse, center, middle
 .pull-right-c[
 
 ```{r, echo = FALSE, out.width = "95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/bib.png")
+knitr::include_graphics("../image/bib.png")
 ```
 
 ]
@@ -2075,7 +2075,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib.png")
 .pull-right-c[
 
 ```{r, echo=FALSE, out.width="100%"}
-knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
+knitr::include_graphics("../image/bib1.png")
 ```
 
 ]
@@ -2118,7 +2118,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
 .pull-right-c[
 
 ```{r, echo=FALSE, out.width="95%"}
-knitr::include_graphics("rmd_workshop_files/images_data/csl.png")
+knitr::include_graphics("../image/csl.png")
 ```
 
 ]
@@ -2271,7 +2271,7 @@ Most codes go inside code chunks
 ````md
 `r ''````{r}
 
-df <- read.csv("rmd_workshop_files/images_data/journals.csv") %>% 
+df <- read.csv("../image/journals.csv") %>% 
       mutate(age = 2020 - since,
              english = factor(english),
              subfield = factor(subfield))
@@ -2733,7 +2733,7 @@ The syntax <span style="background-color: #e5e5e5; border-radius: 3px; padding: 
 
 ```{r, echo=FALSE, fig.align="center", out.width="65%"}
 
-knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 ```
 
 <center>Figure 1: A screenshot of the Google Scholar homepage.</center>
@@ -2748,7 +2748,7 @@ Figures are numbered automatically
 
 ```{r, echo=FALSE, fig.align="center", out.width="65%"}
 
-knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 ```
 
 <center>.yellow-h[Figure 1]: A screenshot of the Google Scholar homepage. </center>
@@ -2764,7 +2764,7 @@ The syntax can accept `width` or `height` attributes as follows
 
 ```{r, echo=FALSE, fig.align="center", out.width="40%"}
 
-knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 ```
 
 <center>Figure 1: A screenshot of the Google Scholar homepage.</center>
@@ -2796,7 +2796,7 @@ knitr::include_graphics("../image/google_scholar.png")
 
 ```{r, echo=FALSE, out.width="55%"}
 
-knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 ```
 
 <center>Figure 1: A screenshot of the Google Scholar homepage.</center> 
@@ -2816,7 +2816,7 @@ knitr::include_graphics("../image/google_scholar.png")
 
 ```{r, echo=FALSE, out.width="40%"}
 
-knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 ```
 
 <center>Figure 1: A screenshot of the Google Scholar homepage.</center> 
@@ -2837,7 +2837,7 @@ knitr::include_graphics("../image/google_scholar.png")
 
 ```{r, echo=FALSE, fig.align="center", out.width="40%"}
 
-knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 ```
 
 <center>Figure 1: A screenshot of the Google Scholar homepage.</center> 
