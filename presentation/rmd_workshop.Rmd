@@ -229,7 +229,7 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 
 - How resource intensive would this test be?
 
-    - how accesible is the data, documentation (how was the variable re-coded in the first place?), and the code?
+    - how accessible is the data, documentation (how was the variable re-coded in the first place?), and the code?
     - how long would the test take?
     - how many programmes would be needed for this revision, and how much would they cost?
     - there is an inverse relationship between this resource intensity and reproducibilty
@@ -460,7 +460,7 @@ class: action
 
     - the document, formatted in Word but saved as PDF, that we will re-create with R Markdown 
     - randomly generated sentences, with figures and tables from randomly a generated dataset<sup>*</sup>
-    - key sections in-need of attention are highlighted yellow
+    - key sections in need of attention are highlighted yellow
     
 .footnote[
 
@@ -2289,7 +2289,7 @@ The average H5 Index for the journals in the dataset is \`r mean(df$h5_index)`.
 ---
 ## Code Chunks &mdash; Overview
 
-- Code chunks are delimitted spaces between a pair of three backticks
+- Code chunks are delimited spaces between a pair of three backticks
     - below is an empty chunk for R code
 
 ````md
@@ -2326,7 +2326,7 @@ df <- read_csv("data/journals.csv")
 ---
 ## Code Chunks &mdash; Options
 
-- Code chunks take options, listed on the same line with the first delimitter, in curly brackets
+- Code chunks take options, listed on the same line with the first delimiter, in curly brackets
 
     - avoid spaces around the equal sign <span style="background-color: #ffff88;">=</span> between option tags and values
         - such spaces might lead to errors    
@@ -2641,7 +2641,7 @@ df <- df_raw %>%
 
 Code can also be incorporated in text, with the <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>&grave;r &grave;</code></span> syntax
 
-- unline chunks, these do not take options   
+- unlike chunks, these do not take options   
 <br>
 - the output document will display the result of the code
     - in the exact place of the source code   
@@ -4244,7 +4244,7 @@ class: inverse, center, middle
     - at the end of every sitting, essentially a different version of the same manuscript is created
     
 
-- With many versions created over time, there emerges at least two challenges
+- With many versions created over time, there emerge at least two challenges
 
    - keeping track of changes and versions
    - reverting to a previous version when necessary
