@@ -117,13 +117,29 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 Resul Umit
 
-- post-doctoral researcher at the University of Oslo
+- post-doctoral researcher in political science at the University of Oslo
 
-- interested in representation, elections, and parliaments
-    - [a recent publication](https://doi.org/10.1080/17457289.2019.1604529):
-    When members of parliament disagree with their principals (country, constituency, party), how do they justify this to them?    
+- teaching and studying representation, elections, and parliaments
+    - [a recent publication](https://doi.org/10.1177%2F1478929920967588):
+    Parliamentary communication allowances do not increase electoral turnout or incumbents’ vote share
+
+--
+
+<br>
+
+- teaching workshops, also on
+
+  - [version control and collaboration](https://resulumit.com/teaching/git_workshop.html)
+  - [working with Twitter data](https://resulumit.com/teaching/twtr_workshop.html)
+  - [creating academic websites](https://resulumit.com/teaching/rbd_workshop.html)
+  - [automated web scraping ](https://resulumit.com/syllabi/21spring_ws.pdf)
+
     
-    - more at [resulumit.com](https://resulumit.com/)
+--
+
+<br>
+
+- more information available at [resulumit.com](https://resulumit.com/)
 
 ---
 ## How did I use to write?
