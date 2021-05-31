@@ -949,7 +949,7 @@ Variables can take strings, options, sub-options, and .yellow-h[code]
 ```{r, eval = FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
-date: "`r format(Sys.Date(), '%d %B %Y')`"      #<<
+date: "\`r format(Sys.Date(), '%d %B %Y')`"      #<<
 output: 
     pdf_document:
         keep_tex: true                    
@@ -1286,7 +1286,7 @@ Variables can take code as well
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"
-date: "`r format(Sys.Date(), '%d %B %Y')`"  #<<
+date: "\`r format(Sys.Date(), '%d %B %Y')`"  #<<
 bibliography: references.bib
 csl: apa_7th.csl   
 output: pdf_document
@@ -1315,7 +1315,7 @@ Variables can take code as well
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"
-date: "`r format(Sys.Date(), '%d %B %Y')`"  #<<
+date: "\`r format(Sys.Date(), '%d %B %Y')`"  #<<
 bibliography: references.bib
 csl: apa_7th.csl   
 output: pdf_document
@@ -1351,7 +1351,7 @@ Code and text can be combined in a string
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"
-date: "First version: 4 March 2020. This version: `r format(Sys.Date(), '%d %B %Y')`."  #<<
+date: "First version: 4 March 2020. This version: \`r format(Sys.Date(), '%d %B %Y')`."  #<<
 bibliography: references.bib
 csl: apa_7th.csl   
 output: pdf_document
@@ -1454,9 +1454,9 @@ This is another sentence on a new line.
 .out-t[This is a sentence followed by one space. This is another sentence on a new line.]
 
 ---
-## Syntax &mdash; Hard Brakes
+## Syntax &mdash; Hard Breaks
 
-Two or more spaces at the end of lines introduce hard brakes, forcing a new line
+Two or more spaces at the end of lines introduce hard breaks, forcing a new line
 
 ```{r eval = FALSE}
 This is a sentence followed by two spaces.  
@@ -1565,7 +1565,7 @@ class: action
 
 ## Exercises
 
-5) Hard Brakes
+5) Hard Breaks
 
 - see `reproduce_this.pdf`: page 1 
 - apply in `journals.Rmd`: paragraph 1
@@ -4355,7 +4355,7 @@ Version control with Git and GitHub requires
 ---
 class: action
 
-## Version Control &mdash; Git &mdash; Inital Setup
+## Version Control &mdash; Git &mdash; Initial Setup
 
 1) Enable version control with RStudio
 
@@ -4372,7 +4372,7 @@ class: action
 ---
 class: action
 
-## Version Control &mdash; Git &mdash; Inital Setup
+## Version Control &mdash; Git &mdash; Initial Setup
 
 
 2) Set Git Bash as your shell (Windows-only step)
@@ -4384,7 +4384,7 @@ class: action
 ---
 class: action
 
-## Version Control &mdash; Git &mdash; Inital Setup
+## Version Control &mdash; Git &mdash; Initial Setup
 
 3) Introduce yourself to Git
 
