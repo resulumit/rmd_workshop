@@ -177,7 +177,7 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 - Efficient
 
    - write text, cite sources, tidy data, analyse, table, and plot it in one programme/screen
-   - re-do one, more, or all of these with ease
+   - redo one, more, or all of these with ease
        - decrease the possibility of making mistakes in the process
        
 --
@@ -200,13 +200,13 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 
 - Having written a complete draft
 
-    - with data including re-coded variables, tables, figures, and text with references to specific results (e.g., numbers from summary and/or regression statistics)
+    - with data including recoded variables, tables, figures, and text with references to specific results (e.g., numbers from summary and/or regression statistics)
 
 --
 
 - If you and/or your co-authors decide 
 
-    - to reverse a re-coded variable to its previous/original measure
+    - to reverse a recoded variable to its previous/original measure
     - and/or, to exclude a subgroup of observations from analysis
 
 --
@@ -222,14 +222,14 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 
 - After your paper is published, if others, including your future self, would like to test how robust the results are
 
-    - to reversing a re-coded variable to its previous/original measure
+    - to reversing a recoded variable to its previous/original measure
     - and/or, to excluding a subgroup of observations from analysis
 
 --
 
 - How resource intensive would this test be?
 
-    - how accessible is the data, documentation (how was the variable re-coded in the first place?), and the code?
+    - how accessible is the data, documentation (how was the variable recoded in the first place?), and the code?
     - how long would the test take?
     - how many programmes would be needed for this revision, and how much would they cost?
     - there is an inverse relationship between this resource intensity and reproducibilty
@@ -458,7 +458,7 @@ class: action
 
 - `manuscript\reproduce_this.pdf`
 
-    - the document, formatted in Word but saved as PDF, that we will re-create with R Markdown 
+    - the document, formatted in Word but saved as PDF, that we will recreate with R Markdown 
     - randomly generated sentences, with figures and tables from randomly a generated dataset<sup>*</sup>
     - key sections in need of attention are highlighted yellow
     
@@ -472,7 +472,7 @@ class: action
 ## Course Materials &mdash; Contents
 
 - `manuscript\reproduce_this.pdf`
-    - the document, formatted in Word but saved as PDF, that we will re-create with R Markdown 
+    - the document, formatted in Word but saved as PDF, that we will recreate with R Markdown 
     - randomly generated sentences, with figures and tables from randomly generated dataset
     - key sections in-need of attention are highlighted
 
@@ -1434,9 +1434,9 @@ This is another sentence on a new line.
 .out-t[This is a sentence followed by one space. This is another sentence on a new line.]
 
 ---
-## Syntax &mdash; Hard Brakes
+## Syntax &mdash; Hard Breakes
 
-Two or more spaces at the end of lines introduce hard brakes, forcing a new line
+Two or more spaces at the end of lines introduce hard breakes, forcing a new line
 
 ```{r eval = FALSE}
 This is a sentence followed by two spaces.  
@@ -1520,7 +1520,7 @@ second sentence of that paragraph, which is followed by a blank line.
 Text with the syntax .inline-c[<!--].inline-c[comments -->] is omitted from output
 
 ```md
-<!-- This paragraph needs re-writing -->
+<!-- This paragraph needs rewriting -->
 This is the first sentence of a paragraph as it is preceded by a blank line. This is the second 
 sentence of that paragraph, which is followed by a blank line. 
 
@@ -1545,7 +1545,7 @@ class: action
 
 ## Exercises
 
-5) Hard Brakes
+5) Hard Breakes
 
 - see `reproduce_this.pdf`: page 1 
 - apply in `journals.Rmd`: paragraph 1
@@ -4339,7 +4339,7 @@ Version control with Git and GitHub requires
 ---
 class: action
 
-## Version Control &mdash; Git &mdash; Inital Setup
+## Version Control &mdash; Git &mdash; Initial Setup
 
 1) Enable version control with RStudio
 
