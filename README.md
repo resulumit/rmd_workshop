@@ -17,11 +17,17 @@ The workshop is divided into ten parts. Most parts include exercises &mdash; 40+
 | **Part 4. Writing Text** <br /> - e.g., adding emphasis to text | **Part 9. Collaborating with Others** <br /> - e.g., working simultaneously with co-authors | 
 | **Part 5. Managing References** <br /> - e.g., citing sources | **Part 10. Working on a Real Project** <br /> - e.g., converting a work-in-progress of yours |
 
-   
+## Slides
+
+The workshop slides are available to view at <https://resulumit.com/teaching/rmd_workshop.html>.
+
+These HTML slides, produced with the `xaringan` package (Xie, 2020), are known to crash for some Safari users. If using a different browser application, such as Chrome or Firefox, is not an option for you, I recommend viewing the PDF version of the slides, available [here on GitHub](https://github.com/resulumit/rmd_workshop/blob/master/presentation/rmd_workshop.pdf).
+
+The source files for the slides are under the `presentation` directory of this repository.
 
 ##  Materials
 
-The workshop materials are available in a separate branch of this repository, called [materials](https://github.com/resulumit/rmd_workshop/tree/materials). It includes the following:
+The remaining workshop materials are available in a separate branch of this repository, called [materials](https://github.com/resulumit/rmd_workshop/tree/materials). It includes the following:
 
 - `manuscript\reproduce_this.pdf`
     - a document, formatted in Word but saved as PDF, to be re-created with R Markdown 
@@ -55,17 +61,8 @@ The workshop materials are available in a separate branch of this repository, ca
         - **subfield**: subfield (1) *vs.* generalist (0) journals
         - **issues**: number of issues published per year (integers)
    
-
 - `image\google_scholar.png`
     - a screeenshot image of the Google Scholar homapage, copyright Google, LLC 
-
-- `presentation\rmd_workshop.pdf`
-    - slides in PDF format
-    - HTML version is available at <https://resulumit.com/teaching/rmd_workshop.html>
-        - offers, among others, the ability to scroll across long codes on some slides
-
-- `presentation\rmd_workshop.Rmd`
-    - an R Markdown file behind the slides, produced with the `xaringan` package (Xie, 2020)
         
 - `test\run_this.R`
     - an R script that 
