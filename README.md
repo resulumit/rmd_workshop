@@ -19,9 +19,9 @@ The workshop is divided into ten parts. Most parts include exercises &mdash; 40+
 
    
 
-##  Material
+##  Materials
 
-Below are the workshop materials kept in this repository.
+The workshop materials are available in a separate branch of this repository, called [materials](https://github.com/resulumit/rmd_workshop/tree/materials). It includes the following:
 
 - `manuscript\reproduce_this.pdf`
     - a document, formatted in Word but saved as PDF, to be re-created with R Markdown 
