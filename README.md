@@ -19,11 +19,9 @@ The workshop is divided into ten parts. Most parts include exercises &mdash; 40+
 
 ## Slides
 
-The workshop slides are available to view at <https://resulumit.com/teaching/rmd_workshop.html>.
+The slides for the workshop are available to view at <https://resulumit.com/teaching/rmd_workshop.html>. These HTML slides are created with `xaringan` package (Xie, 2020).
 
-These HTML slides, produced with the `xaringan` package (Xie, 2020), are known to crash for some Safari users. If using a different browser application, such as Chrome or Firefox, is not an option for you, I recommend viewing the PDF version of the slides, available [here on GitHub](https://github.com/resulumit/rmd_workshop/blob/master/presentation/rmd_workshop.pdf).
-
-The source files for the slides are under the `presentation` directory of this repository.
+See the `presentation` directory of this repository for the source files underlying the slides. The same directory also includes the [PDF version of the slides](https://github.com/resulumit/rmd_workshop/blob/master/presentation/rmd_workshop.pdf), which might come handly if the HTML version is too large for your browser to function. This is indeed a known problem for some Safari users.
 
 ##  Materials
 
