@@ -132,7 +132,7 @@ Resul Umit
   - [version control and collaboration](https://resulumit.com/teaching/git_workshop.html)
   - [working with Twitter data](https://resulumit.com/teaching/twtr_workshop.html)
   - [creating academic websites](https://resulumit.com/teaching/rbd_workshop.html)
-  - [automated web scraping ](https://resulumit.com/syllabi/21spring_ws.pdf)
+  - [automated web scraping ](https://resulumit.com/teaching/scrp_workshop.html)
 
     
 --
