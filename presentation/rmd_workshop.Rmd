@@ -471,7 +471,7 @@ class: action
   
   - rename the folder as `YOURNAME-rmd`
      - e.g., `resul-rmd`
-     - this will come handy in Part 9
+     - this will come handy when we collaborate [Part 9](#part9)
   
 ---
 ## Course Materials &mdash; Contents
@@ -484,7 +484,7 @@ class: action
     
 .footnote[
 
-<sup>*</sup> The text, _Lorem ipsum_, is generated with the `stringi` package (Gagolewski, 2020) while the dataset is created with the `fabricatr` package (Blair et al., 2019). 
+<sup>*</sup> The text, _Lorem ipsum_, is generated with the `stringi` package ([Gagolewski, 2021](https://cran.r-project.org/web/packages/stringi/index.html)) while the dataset is created with the `fabricatr` package ([Blair et al., 2021](https://cran.r-project.org/web/packages/fabricatr/index.html)). 
 
 ]
 
@@ -511,13 +511,13 @@ class: action
 
 - `manuscript\apa_7th.csl`
 
-    - a Citation Style Language document, with APA (7th Edition) referencing style (Wiernik, 2020)
+    - a Citation Style Language document, with APA (7th Edition) referencing style ([Wiernik, 2020](https://www.zotero.org/styles/apa-no-ampersand))
 
 ---
 ## Course Materials &mdash; Contents  
 
 `data\journals.csv`
-- a dataset created with the `fabricatr` package (Blair et al., 2019), imagined to explore the `Google Scholar` rankings of fictitious journals
+- a dataset created with the `fabricatr` package ([Blair et al., 2021](https://cran.r-project.org/web/packages/fabricatr/index.html)), imagined to explore the `Google Scholar` rankings of fictitious journals
     
 - includes the following variables 
     - **name**: journals (1090 random titles)
@@ -580,7 +580,7 @@ class: action
 ## R Packages &mdash; Install from within RStudio
 
 ```{r eval=FALSE, tidy=FALSE}
-install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+install.packages(c(`"rmarkdown"`, "tinytex", "dplyr", "stargazer", "ggplot2"))
 
 tinytex::install_tinytex()
 
@@ -588,7 +588,7 @@ tinytex::install_tinytex()
 
 --
 
-- `rmarkdown` (Allaire et al., 2020), for automating the process of converting R Markdown documents into other formats
+- `rmarkdown` ([Allaire et al., 2021](https://cran.r-project.org/web/packages/rmarkdown/index.html)), for automating the process of converting R Markdown documents into other formats
 
 ---
 class: action
@@ -596,15 +596,15 @@ class: action
 ## R Packages &mdash; Install from within RStudio
 
 ```{r eval=FALSE, tidy=FALSE}
-install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+install.packages(c("rmarkdown", `"tinytex"`, "dplyr", "stargazer", "ggplot2"))
 
 tinytex::install_tinytex() #<<
 
 ```
 
-- `rmarkdown` (Allaire et al., 2020), for automating the process of converting R Markdown documents into other formats
+- `rmarkdown` ([Allaire et al., 2021](rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html)), for automating the process of converting R Markdown documents into other formats
 
-- `tinytex` (Xie, 2020), for PDF outputs
+- `tinytex` ([Xie, 2021a](https://cran.r-project.org/web/packages/tinytex/index.html)), for PDF outputs
     - requires an additional step to install
     - alternative: a TeX/LaTeX system installed on your computer
 
@@ -614,26 +614,55 @@ class: action
 ## R Packages &mdash; Install from within RStudio
 
 ```{r eval=FALSE, tidy=FALSE}
-install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+install.packages(c("rmarkdown", "tinytex", `"dplyr"`, "stargazer", "ggplot2"))
 
 tinytex::install_tinytex()
 
 ```
 
 
-- `dplyr` (Wickham, 2020a), for data manipulation
-    - alternatives: e.g., `base`, `data.table` (Dowle & Srinivasan, 2019)
+- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
 
---
+---
+class: action
 
-- `stargazer` (Hlavac, 2018), for tables
-    - alternatives: e.g., `knitr` (Xie, 2020b), `kableExtra` (Zhu, 2019)
+## R Packages &mdash; Install from within RStudio
+
+```{r eval=FALSE, tidy=FALSE}
+install.packages(c("rmarkdown", "tinytex", "dplyr", `"stargazer"`, "ggplot2"))
+
+tinytex::install_tinytex()
+
+```
+
+
+- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
     
---
-
+- `stargazer` ([Hlavac, 2018](https://cran.r-project.org/web/packages/stargazer/index.html)), for tables
+    - popular alternatives: `knitr` ([Xie, 2021b](https://cran.r-project.org/web/packages/knitr/index.html)), `kableExtra` ([Zhu, 2021](https://cran.r-project.org/web/packages/kableExtra/index.html))
     
-- `ggplot2` (Wickham, 2020b), for figures
-    - alternatives: e.g., `base`, `plotly` (Sievert et al., 2020)
+---
+class: action
+
+## R Packages &mdash; Install from within RStudio
+
+```{r eval=FALSE, tidy=FALSE}
+install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", `"ggplot2"`))
+
+tinytex::install_tinytex()
+
+```
+
+- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
+    
+- `stargazer` ([Hlavac, 2018](https://cran.r-project.org/web/packages/stargazer/index.html)), for tables
+    - popular alternatives: `knitr` ([Xie, 2021b](https://cran.r-project.org/web/packages/knitr/index.html)), `kableExtra` ([Zhu, 2021](https://cran.r-project.org/web/packages/kableExtra/index.html))
+    
+- `ggplot2` ([Wickham et al., 2021b](https://cran.r-project.org/web/packages/ggplot2/index.html)), for figures
+    - popular alternatives: `base`, `plotly` ([Sievert et al., 2021](https://cran.r-project.org/web/packages/plotly/index.html))
 
 ---
 class: action
@@ -677,12 +706,15 @@ Downloading process can be initiated from within RStudio
 
    - available at [https://pandoc.org/MANUAL.html](https://pandoc.org/MANUAL.html)
 
-- R Markdown: The Definitive Guide (Xie et al., 2019)
+<br>
+
+- R Markdown: The Definitive Guide ([Xie et al., 2021a](https://bookdown.org/yihui/rmarkdown))
 
    - open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/)
     
+<br>
 
-- R for Data Science (Wickham and Grolemund, 2019)
+- R for Data Science ([Wickham and Grolemund, 2021](https://r4ds.had.co.nz](https://r4ds.had.co.nz/))
   
    - open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/)
    
@@ -836,8 +868,8 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 - R Markdown can produce more than documents,<sup>*</sup> including
 
   - presentations, again with `rmarkdown`
-  - books, with `bookdown` (Xie, 2020c)
-  - websites, with `blogdown` (Xie, 2020d)
+  - books, with `bookdown` ([Xie, 2021c](https://cran.rstudio.com/web/packages/bookdown/index.html))
+  - websites, with `blogdown` ([Xie et al., 2021b](https://cran.r-project.org/web/packages/blogdown/index.html))
 
 .footnote[
 
@@ -1184,7 +1216,7 @@ The `bibliography` and `csl` variables take strings as well
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"                                    
-date: 4 May 2020 
+date: 4 March 2020 
 bibliography: references.bib   #<<
 csl: apa_7th.csl               #<<  
 output: pdf_document                                    
@@ -5118,42 +5150,42 @@ class: inverse, center, middle
 ---
 ## References
 
-Allaire, J. J., Xie, Y., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W. and Iannone, R. (2020). [rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html). R package, version 2.1.
+Allaire, J. J., Xie, Y., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W. and Iannone, R. (2021). [rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html). R package, version 2.11.
 
-Blair, G., Cooper, J., Coppock, A., Humphreys, M., Rudkin, A. and Fultz, N. (2019). [fabricatr: Imagine your data before you collect it](https://cran.r-project.org/web/packages/fabricatr/index.html). R package, version 0.10.0.
+Blair, G., Cooper, J., Coppock, A., Humphreys, M., Rudkin, A. and Fultz, N. (2021). [fabricatr: Imagine your data before you collect it](https://cran.r-project.org/web/packages/fabricatr/index.html). R package, version 0.14.0.
 
 Carlisle, D., Fairbairns, R., Harris, E. and Tobin, G. (2011). [setspace – Set space between lines](https://ctan.org/pkg/setspace). LaTeX package, version 6.7a.
 
-Dowle, M. and Srinivasan, A. (2019). [data.table: Extension of 'data.frame'](https://cran.r-project.org/web/packages/data.table/index.html). R package, version 1.12.8.
+Dowle, M. and Srinivasan, A. (2021). [data.table: Extension of 'data.frame'](https://cran.r-project.org/web/packages/data.table/index.html). R package, version 1.14.2.
 
-Gagolewski, M. (2020). [stringi: Character String Processing Facilities](https://cran.r-project.org/web/packages/stringi/index.html). R package, version 1.4.6.
+Gagolewski, M. (2021). [stringi: Character String Processing Facilities](https://cran.r-project.org/web/packages/stringi/index.html). R package, version 1.7.5.
 
 Hlavac, M. (2018). [stargazer: Well-formatted regression and summary statistics tables](https://cran.r-project.org/web/packages/stargazer/index.html). R package, version 5.2.2.
 
-Sievert, C., Parmer, C.,  Hocking, T., Chamberlain, S., Ram, K., Corvellec, M., & Despouy, P. (2020). [plotly: Create Interactive Web Graphics via 'plotly.js'](https://cran.r-project.org/web/packages/plotly/index.html). R package, version 4.9.3.
+Sievert, C., Parmer, C.,  Hocking, T., Chamberlain, S., Ram, K., Corvellec, M., & Despouy, P. (2021). [plotly: Create Interactive Web Graphics via 'plotly.js'](https://cran.r-project.org/web/packages/plotly/index.html). R package, version 4.10.0.
 
-Wickham, H. and Grolemund, G. (2019). R for data science. O'Reilly. Open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/).
+Wickham, H. and Grolemund, G. (2021). R for data science. O'Reilly. Open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/).
 
-Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., Yutani, H. and Dunnington, D. (2020a). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 0.8.5.
+Wickham, H., François, W., Henry L. and Müller, K.(2021a). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 1.0.7.
 
 ---
 ## References
 
-Wickham, H., François, W., Henry L. and Müller, K. (2020b). [ggplot2: Create elegant data visualisations using the grammar of graphics](https://cran.r-project.org/web/packages/ggplot2/index.html). R package, version 0.8.5.
+Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., Yutani, H. and Dunnington, D. (2021b). [ggplot2: Create elegant data visualisations using the grammar of graphics](https://cran.r-project.org/web/packages/ggplot2/index.html). R package, version 3.3.5.
 
 Wiernik, B. M. (2020). [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand). Citation style language file, version 1.0.
 
-Xie, Y. (2020a). [tinytex: Helper functions to install and maintain TeX Live and compile LaTeX documents](https://cran.r-project.org/web/packages/tinytex/index.html). R package, version 0.21.
+Xie, Y. (2021a). [tinytex: Helper functions to install and maintain TeX Live and compile LaTeX documents](https://cran.r-project.org/web/packages/tinytex/index.html). R package, version 0.34.
 
-Xie, Y. (2020b). [knitr: A general-purpose package for dynamic report generation in R](https://cran.r-project.org/web/packages/knitr/index.html). R package, version 1.28.
+Xie, Y. (2021b). [knitr: A general-purpose package for dynamic report generation in R](https://cran.r-project.org/web/packages/knitr/index.html). R package, version 1.36.
 
-Xie, Y. (2020c). [bookdown: Authoring books and technical documents with R Markdown](https://cran.rstudio.com/web/packages/bookdown/index.html). R package, version 0.18.
+Xie, Y. (2021c). [bookdown: Authoring books and technical documents with R Markdown](https://cran.rstudio.com/web/packages/bookdown/index.html). R package, version 0.24.
 
-Xie, Y. (2020d). [blogdown: Create blogs and websites with R Markdown](https://cran.r-project.org/web/packages/blogdown/index.html). R package, version 0.18.
+Xie, Y., Allaire, J. J., and Grolemund, G. (2021a). R markdown: The definitive guide. CRC Press. Open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/).
 
-Xie, Y., Allaire, J. J., and Grolemund, G. (2019). R markdown: The definitive guide. CRC Press. Open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/).
+Xie, Y, Dervieux, C. Presmanes Hill, A. (2021b). [blogdown: Create blogs and websites with R Markdown](https://cran.r-project.org/web/packages/blogdown/index.html). R package, version 1.5.
 
-Zhu, H. (2019). [kableExtra: Construct Complex Table with 'kable' and Pipe Syntax](https://cran.r-project.org/web/packages/kableExtra/index.html). R package, version 1.1.0.
+Zhu, H. (2021). [kableExtra: Construct Complex Table with 'kable' and Pipe Syntax](https://cran.r-project.org/web/packages/kableExtra/index.html). R package, version 1.3.4.
 
 ---
 class: middle, center
