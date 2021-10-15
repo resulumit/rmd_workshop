@@ -13,7 +13,7 @@ install.packages(c("rmarkdown", "tinytex", "dplyr", "ggplot2", "stargazer"))
 tinytex::install_tinytex()
 
 # 3. download the test file
-download.file(url = "https://raw.githubusercontent.com/resulumit/rmd_workshop/materials/test/the_test.Rmd",
+download.file(url = "https://raw.githubusercontent.com/resulumit/rmd_workshop/master/test/the_test.Rmd",
               destfile = "the_test.Rmd")
 
 # 4. attempt to turn the r markdown file into a pdf
