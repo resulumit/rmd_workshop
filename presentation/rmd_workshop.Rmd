@@ -861,7 +861,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 - Behind the scenes, each .Rmd file is compiled in its own session, and therefore
 
   - the code needs to stand alone, for reproducibility reasons
-  - you might have already loaded a package and/or imported data elsewhere (e.g., in a separate .R and/or .Rmd file), but even in the same session, these won't be available to a given .Rmd file
+  - e.g., if you load a package in the Console, it will not be available to a given .Rmd file &mdash; even in the same R session
 
 --
 
