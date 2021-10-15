@@ -2,7 +2,7 @@
 title: "Writing Reproducible Research Papers with R Markdown"
 subtitle: "Resul Umit"
 institute: ""
-date: "November 2020"
+date: "October 2021"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -104,7 +104,7 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 ### Resul Umit
 
-### November 2020
+### October 2021
 
 .footnote[
 
@@ -120,9 +120,9 @@ Resul Umit
 - post-doctoral researcher in political science at the University of Oslo
 
 - teaching and studying representation, elections, and parliaments
-    - [a recent publication](https://doi.org/10.1177%2F1478929920967588):
-    Parliamentary communication allowances do not increase electoral turnout or incumbents’ vote share
-
+    - [a recent publication](https://doi.org/10.1017/psrm.2021.30):
+    the effects of casualties in terror attacks on elections
+    
 --
 
 <br>
@@ -130,11 +130,10 @@ Resul Umit
 - teaching workshops, also on
 
   - [version control and collaboration](https://resulumit.com/teaching/git_workshop.html)
+  - [automated web scraping ](https://resulumit.com/teaching/scrp_workshop.html)
   - [working with Twitter data](https://resulumit.com/teaching/twtr_workshop.html)
   - [creating academic websites](https://resulumit.com/teaching/rbd_workshop.html)
-  - [automated web scraping ](https://resulumit.com/teaching/scrp_workshop.html)
 
-    
 --
 
 <br>
@@ -361,8 +360,9 @@ Slides with this background colour indicate that your action is required, for
 ---
 ## The Workshop &mdash; Organisation &mdash; Slides
 
-- Codes and texts that go in R Markdown documents .inline-c[appear as such &mdash; in a different font, on gray background]
-    - long codes and texts will have their own line(s)
+- Codes and texts that go in R Markdown documents .inline-c[appear as such &mdash; in a different font, on gray background]     
+
+  - long codes and texts will have their own line(s)
 
 ````md
 `r ''````{r, scatterplot, fig.cap = "A scatterplot of journal metrics."}
