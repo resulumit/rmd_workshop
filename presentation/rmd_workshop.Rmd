@@ -1540,7 +1540,7 @@ This is another sentence on a new line.]
 ---
 ## Syntax &mdash; Line Blocks
 
-Spaces in lines starting with a vertical line .yellow-h[|] are kept
+Spaces on lines that start with a vertical line .yellow-h[|] are kept
 
 ```{r eval=FALSE}
 | a one-space indent
