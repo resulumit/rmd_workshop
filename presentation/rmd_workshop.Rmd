@@ -2413,6 +2413,8 @@ df <- read.csv("rmd_workshop_files/images_data/journals.csv") %>%
 ```
 ````
 
+<br>
+
 Codes can also go in line with text
 - e.g., code that results in a single statistic
 
@@ -2423,31 +2425,151 @@ The average H5 Index for the journals in the dataset is \`r mean(df$h5_index)`.
 ---
 ## Code Chunks &mdash; Overview
 
-- Code chunks are delimited spaces between a pair of three backticks
-    - below is an empty chunk for R code
+.pull-left-c[
+
+- Code chunks are delimited spaces between a pair of three backticks .yellow-h[`]
+
+  - placed on their own lines in .Rmd documents, separate from text
+  - their output, if there is any, appear in the output document
+      - at about the same place as the chunk
+      - might float around text to avoid breaking across pages
+
+]
+
+.pull-right-c[
 
 ````md
-`r ''````{r}
+`r ''````
 
 ```
 ````
 
-- `r` is an option of the chunk, indicating that the code in the chunk above should be run by R
-    - it could have been `python`, which we will not cover in this workshop
-    - options go in a pair of curly brackets, on the same line with the first delimiter
+]
 
-- Chunks can be placed anywhere in .Rmd documents
-    - their output, if there is any, might float around text to avoid breaking across pages
+---
+## Code Chunks &mdash; Overview
+
+.pull-left-c[
+
+- Code chunks are delimited spaces between a pair of three backticks `
+
+  - placed on their own lines in .Rmd documents, separate from text
+  - their output, if there is any, appear in the output document
+      - at about the same place as the chunk
+      - might float around text to avoid breaking across pages
+      
+<br>
+
+- On the same line with the first delimiter, and in curly brackets .yellow-h[{], code chunks take
+
+  - .yellow-h[a languge engine]
+
+]
+
+.pull-right-c[
+
+````md
+`r ''````{`r`}
+
+```
+````
+]
+
+---
+## Code Chunks &mdash; Overview
+
+.pull-left-c[
+
+- Code chunks are delimited spaces between a pair of three backticks `
+
+  - placed on their own lines in .Rmd documents, separate from text
+  - their output, if there is any, appear in the output document
+      - at about the same place as the chunk
+      - might float around text to avoid breaking across pages
+      
+<br>
+
+- On the same line with the first delimiter, and in curly brackets {, code chunks take
+
+  - a language engine
+  - .yellow-h[a label]
+
+]
+
+.pull-right-c[
+
+````md
+`r ''````{r, `setup`}
+
+```
+````
+]
+
+---
+## Code Chunks &mdash; Overview
+
+.pull-left-c[
+
+- Code chunks are delimited spaces between a pair of three backticks `
+
+  - placed on their own lines in .Rmd documents, separate from text
+  - their output, if there is any, appear in the output document
+      - at about the same place as the chunk
+      - might float around text to avoid breaking across pages
+      
+<br>
+
+- On the same line with the first delimiter, and in curly brackets {, code chunks take
+
+  - a language engine
+  - a label
+  - .yellow-h[one or more options]
+
+]
+
+.pull-right-c[
+
+````md
+`r ''````{r, setup, `echo=FALSE`}
+
+```
+````
+
+]
+
+---
+## Code Chunks &mdash; Lenguage Engines
+
+The first item in code chunks indicates the engine to run the code
+
+````md
+`r ''````{`r`}
+
+```
+````
+
+<br>
+
+Note that
+
+- indicating an engine for each chunk is a must
+
+  - otherwise, any code<sup>*</sup> in these chunks cannot be executed
+
+- `r` is the specified engine, indicating that the code in the chunk above should be run by R
+      
+  - it could have been `python`, which we will not cover in this workshop
+
+.footnote[
+
+<sup>*</sup> The above chunk has no code &mdash; it is for demonstration only.
+
+]
 
 ---
 ## Code Chunks &mdash; Labels
 
-It is recommended to label the code chunks, which are otherwise automatically numbered
-- informative labels can be helpful for navigating through error messages as well as filenames of plots and cache
-    - in the example below, the chunk is labelled as `data_import`
-<br>
-- but note that duplicate labels lead to an error during compilation
-
+It is recommended, but optional, to label the code chunks
 
 ````md
 `r ''````{r, `data_import`}
@@ -2456,29 +2578,70 @@ df <- read_csv("data/journals.csv")
 
 ```
 ````
+<br>
+
+Note that
+
+- labels are written after the language engine, separated by a comma
+
+  - in the example above, the chunk is labelled as `data_import`  
+  
+- chunks without labels are otherwise automatically numbered
+
+  - specifying informative labels can be helpful for, e.g., navigating through error messages
+      
+- duplicate labels lead to errors during compilation
 
 ---
 ## Code Chunks &mdash; Options
 
-- Code chunks take options, listed on the same line with the first delimiter, in curly brackets
-
-    - avoid spaces around the equal sign <span style="background-color: #ffff88;">=</span> between option tags and values
-        - such spaces might lead to errors    
-<br>
-    - in the example below, the chunk is labelled as `setup`, and and the `include` option is set to `FALSE`
-        - with this option and value, nothing from this chunk will be included in the output document
+Code chunks can take further options
 
 ````md
 `r ''````{r, setup, `include=FALSE`}
 
 ```
 ````
+
 <br>
 
-- The list of options is available at <https://yihui.org/knitr/options>
+Note that
 
-    - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) provides a helpful list as well
+- in the example above, the `include` option is set to `FALSE`
+  - with this option and value, nothing from this chunk will be included in the output document
 
+- The complete list of options is available at <https://yihui.org/knitr/options>
+  - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) provides a helpful list as well
+  
+- leaving spaces around the equal sign <span style="background-color: #ffff88;">=</span>, between option tags and values, should be avoided
+  - such spaces might lead to errors    
+
+---
+## Code Chunks &mdash; Options &mdash; Alternative Syntax
+
+Options can be specified inside code chunks as well, after a number sign and a vertical line .yellow-h[&#x23;|]
+- therefore the following chunks have the same function
+
+````md
+`r ''````{r, echo=FALSE, eval=TRUE}
+
+```
+````
+
+````md
+`r ''````{r}
+
+#| echo = FALSE, eval = TRUE
+```
+````
+
+````md
+`r ''````{r}
+
+#| echo = FALSE
+#| eval = TRUE
+```
+````
 
 ---
 ## Code Chunks &mdash; Options &mdash; Defaults
@@ -2502,6 +2665,7 @@ Options have default values
 
 ```
 ````
+
 ---
 ## Code Chunks &mdash; Options &mdash; Defaults
 
@@ -2532,7 +2696,7 @@ head(df)
 ]
 
 ---
-## Code Chunks &mdash; Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Setting .inline-c[echo=FALSE] prevents the code from being displayed in the output document
 
@@ -2556,7 +2720,7 @@ head(df)
 ]
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Prevent the result(s) of the source code from being displayed in the output document
 
@@ -2579,7 +2743,7 @@ This chunk therefore prints one thing in the output document &mdash; the source 
 Setting .inline-c[results="asis"] passes the results as they are produced by the code &mdash; `pandoc` does not transform these. In creating tables for PDF output with the `stargazer` package, this option is a must.
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Cache results for future compilations 
 
@@ -2591,6 +2755,24 @@ Cache results for future compilations
 
 --
 
+<br>
+
+Note that caching
+
+- is useful especially for chunks that take a long time to execute
+  - it can speed up the compilation process
+
+- avoids executing the chunks at every compilation
+  - unless the chunk is newly created or edited since the last cached compilation
+
+- creates a new folder in your working directory
+  
+  - an alternative location can be specified with the `cache.path` option
+
+
+---
+## Code Chunks &mdash; Options &mdash; Examples
+
 Prevent R from running the code in the chunk altogether 
 
 ````md
@@ -2601,6 +2783,8 @@ Prevent R from running the code in the chunk altogether
 
 --
 
+<br>
+
 Prevent messages and/or warnings from being displayed in the output
 
 ````md
@@ -2610,7 +2794,7 @@ Prevent messages and/or warnings from being displayed in the output
 ````
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Define the .yellow-h[actual dimensions] of figures, in inches
 
@@ -2622,6 +2806,8 @@ Define the .yellow-h[actual dimensions] of figures, in inches
 
 --
 
+<br>
+
 Define the size of figures .yellow-h[as they appear in the output document], with `out.width` and/or `out.height`
 
 ````md
@@ -2632,6 +2818,9 @@ Define the size of figures .yellow-h[as they appear in the output document], wit
 
 --
 
+<br>
+
+
 Define the alignment of figures &mdash; `left`, `right`, or `center`
 
 ````md
@@ -2641,7 +2830,7 @@ Define the alignment of figures &mdash; `left`, `right`, or `center`
 ````
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Define captions for figures
 
@@ -2653,6 +2842,8 @@ Define captions for figures
 
 --
 
+<br>
+
 Set the resolution for figures
 
 ````md
@@ -2662,6 +2853,8 @@ Set the resolution for figures
 ````
 
 --
+
+<br>
 
 Set extra options, such as angle, that output format would accept for figures
 
@@ -2712,7 +2905,10 @@ I recommend using the second chunk for the main operations<sup>*</sup> on raw da
 `r ''````{r, data, echo=FALSE ...}
 
 df <- df_raw `%>%`
-      `...`
+      mutate(subfield = as.factor(subfield), 
+             english = as.factor(english),
+             age = 2020 - since) `%>%`
+      select(-since)
 
 ```
 ````
@@ -2722,53 +2918,6 @@ df <- df_raw `%>%`
 <sup>*</sup> I will be using the pipe operator <span style="background-color: #ffff88; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>%>%</code></span> and other functions from the `dplyr` package for such operations in the following slides.
 
 ]
-
-
----
-## Code Chunks &mdash; The Data Chunk
-
-Transform `subfield` and `english` into factor variables
-- despite being numeric &mdash; i.e., 0s and 1s &mdash; they are meant to be categorical variables
-
-````md
-`r ''````{r, data, echo=FALSE ...}
-
-df <- df_raw `%>%`
-      `mutate(subfield = as.factor(subfield),` 
-             `english = as.factor(english))`
-
-```
-````
-
----
-## Code Chunks &mdash; The Data Chunk
-
-Create a new variable `age`, based on the existing variable `since`, to be used in regression models later on
-
-````md
-`r ''````{r, data, echo=FALSE ...}
-
-df <- df_raw %>%
-      mutate(subfield = as.factor(subfield), 
-             english = as.factor(english),
-             `age = 2020 - since`)
-
-```
-````
---
-
-Drop the `since` variable, so that it won't appear in our summary statistics table later on
-
-````md
-`r ''````{r, data, echo=FALSE ...}
-
-df <- df_raw %>%
-      mutate(subfield = as.factor(subfield), 
-             english = as.factor(english),
-             age = 2020 - since) `%>%`
-      `select(-since)`
-```
-````
 
 ---
 ## Inline Code &mdash; Overview
@@ -2904,12 +3053,14 @@ knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
 The `knitr` package offers a capable alternative with the `include_graphics()` function
 
 - this goes inside code chunks
-    - use the function with the double-colon operator <span style="background-color: #ffff88">::</span>     
-        - e.g., `knitr::include_graphics("figure.extension")`    
+
+  - use the function with the double-colon operator <span style="background-color: #ffff88">::</span>     
+      - e.g., `knitr::include_graphics("figure.extension")`    
 <br>
 - this is more customisable, through the use of code chunks
-    - size is defined with the `out.width` or `out.hight` options
-        - rather than `fig.height` and/or `fig.width`
+
+  - size is defined with the `out.width` or `out.hight` options
+      - rather than `fig.height` and/or `fig.width`
     
 ---
 ## Figures &mdash; Images &mdash; `knitr`
@@ -3525,13 +3676,13 @@ class: action
 ---
 ## Tables &mdash; `stargazer` &mdash; Overview
 
-- A capable package for creating tables to present
+- A capable package for creating at least three kinds of tables
 
-    - data in columns and rows
+    - raw data, in columns and rows
     - descriptive/summary statistics
     - regression models
 
-- Used widely by academics
+- Used widely by academics, even tough it has not been updated since 2018
 
 - Creates LaTeX code, HTML/CSS code, and ASCII text to be knitted
 
@@ -3541,34 +3692,53 @@ class: action
     - this [vignette](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf) by its author Marek Hlavac
     - this [tutorial](https://www.jakeruss.com/cheatsheets/stargazer/) by Jake Russ
 
-
+- Among its alternatives are the `knitr`, `kableExtra`, and `huxtable` packages
 
 ---
 ## Tables &mdash; `stargazer` &mdash; Notes
 
-- We must
+- The `stargazer` package requires specific settings
 
-  - set the chunk option .inline-c[results="asis"] for chunks with stargazer tables  
+  - in the chunk options
+  - and, in the `type` argument of the `stargazer()` function
+
 <br>
-  - change the argument `type` in the `stargazer()` function for different output formats accordingly   
-  <ul> <li style="margin-top: 7px;">e.g., the default <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "latex"</span> is for LaTeX and PDF, <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "html"</span> for HTML</li> </ul>
 
---
+- These settings depend on the desired output format,<sup>*</sup> as shown below
 
-- It is currently not quite possible to `knit` `stargazer` code into tables in Word documents
+.pull-left[
 
-  - `stargazer` tables will not appear in Word documents automatically    
-<br>
-  - workarounds available
-      - `knit` to HTML as well as Word, copy the tables from HTML to Word
-      - `knit` to PDF, open the PDF in Word
-          - in Word, follow `File -> Open`
+|  Output       | Chunk Option    |  Type Argument |                   
+|:------------- |:----------------|:-------------- |
+| LaTex / PDF   |  results="asis" | latex          |  
+| HTML          |  results="asis" | html           |  
+| Word          |  comment=""     | text           |
 
---
+]
 
-- `stargazer` tables might look slightly different in different output formats
+.footnote[
+
+<sup>*</sup> The following slides use the setting for LaTex and PDF documents.
+
+]
+
+---
+## Tables &mdash; `stargazer` &mdash; Notes
+
+- `stargazer` tables look slightly different in different output formats
 
   - on the following slides, they will have the HTML look
+  - even if the slides display the setting for LaTex and PDF documents.
+
+<br>
+
+- In fact, it is currently not quite possible to `knit` `stargazer` code into tables in Word documents
+
+  - though it can `knit` ASCII text, looking like a table 
+  - some popular workarounds:
+      - `knit` to HTML as well as Word, copy the tables from HTML to Word
+      - `knit` to PDF, open the PDF in Word
+      - use a different package to create tables, such as `huxtable`
 
 ---
 ## Tables &mdash; `stargazer` &mdash; Basics
@@ -3579,6 +3749,8 @@ class: action
         - but it accepts many, many arguments to customise tables
 
 --
+
+<br>
 
 - The `data` argument of that function, with two main options
 
@@ -3601,6 +3773,8 @@ stargazer(data = head(df, n = 4), `type = "latex"`, `summary = FALSE`)
 ```
 ````
 --
+
+<br>
 
 Notice the options of the chunk and the arguments of the function
 
