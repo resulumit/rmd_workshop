@@ -690,7 +690,7 @@ name: rstudio-project
 ---
 class: action
 
-## R Markdown Cheat Sheet &mdash; Download from the Internet
+## [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) &mdash; Download from the Internet
 
 Downloading process can be initiated from within RStudio
 
@@ -720,7 +720,7 @@ Downloading process can be initiated from within RStudio
    
 .footnote[
 
-<sup>*</sup> During the workshop, R Markdown Cheat Sheet is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
+<sup>*</sup> During the workshop, [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
 
 ]
 
@@ -920,7 +920,7 @@ output:
 <br>
     - the list of available variables, as well as options and sub-options for these variables, depends on the output format
        - [Pandoc User's Guide](https://pandoc.org/MANUAL.html) provides a comprehensive documentation
-       - R Markdown Cheat Sheet provides a helpful list
+       - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) provides a helpful list
 
 - Typical YAML variables for an research paper are as follows:
 
@@ -1126,7 +1126,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
 
 .footnote[
 
-<sup>*</sup> For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. See [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or R Markdown Cheat Sheet.
+<sup>*</sup> For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. See [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf).
 
 ]
 
@@ -1406,7 +1406,7 @@ Notice that
 
 - there are quotation marks around the code
 
-- we'll cover codes in .Rmd documents later on in the workshop
+- we will cover codes in .Rmd documents later on in the workshop
 
 ]
 
@@ -1472,7 +1472,7 @@ class: action
 <br>
 
 3) Add and set a completely new variable not covered so far
--  see, for example, the R Markdown Cheat Sheet
+-  see, for example, the [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
 
 <br>
 
@@ -1496,11 +1496,18 @@ class: inverse, center, middle
 ---
 ## Syntax &mdash; Overview
 
+- There are not one, but several different versions of Markdown
+
+  - e.g., [Pandoc](https://pandoc.org/), [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), [CommonMark](https://commonmark.org/)
+  - each might implement the same things (e.g., citations) slightly differently, and each might offer unique functionalities
+
+<br>
+
 - R Markdown follows the syntax in Pandoc's Markdown 
 
    - for the complete rules of the syntax, see [Pandoc User's Guide](https://pandoc.org/MANUAL.html)
-   - for a useful summary of the syntax, see the R Markdown Cheat Sheet
-
+   - for a useful summary of the syntax, see the [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+   
 ---
 ## Syntax &mdash; Lines
 
@@ -1559,7 +1566,7 @@ Spaces on lines that start with a vertical line .yellow-h[|] are kept
 ---
 ## Syntax &mdash; Block Quotes
 
-Lines starting with the greater-than sign .yellow-h[&#62;] introduce block quotes
+Lines starting with the greater-than sign .yellow-h[&#62;] introduce block quotes<sup>*</sup>
 
 ```{r, eval=FALSE}
 > In God, we trust. All others must bring data. 
@@ -1574,6 +1581,13 @@ Lines starting with the greater-than sign .yellow-h[&#62;] introduce block quote
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &mdash; Anonymous
 ]
+
+.footnote[
+
+<sup>*</sup> Notice that three hyphens grouped together introduce an em-dash. Dashes are covered later on in the workshop.
+
+]
+
 ---
 ## Syntax &mdash; Paragraphs
 
@@ -1638,8 +1652,8 @@ class: action
 
 5) Hard Breaks
 
-- see `reproduce_this.pdf`: page 1 
-- apply in `journals.Rmd`: paragraph 1
+- see `reproduce_this.pdf`, page 1 
+- apply in `journals.Rmd`, paragraph 1
 
 <br>
 
@@ -1792,7 +1806,7 @@ Multi-word headers need hyphenation
 
 .footnote[
 
-<sup>*</sup> The [links to references](#reference-links), [figures](#autoref-figures), and [tables](#autoref-tables) are covered later on.
+<sup>*</sup> The [links to references](#reference-links), [figures](#autoref-figures), and [tables](#autoref-tables) are covered later on in the workshop.
 
 ]
 
@@ -1819,7 +1833,7 @@ You can also link text to an email address
 
 .footnote[
 
-<sup>*</sup> Notice the prefix .yellow-h[mailto:] in the syntax
+<sup>*</sup> Notice the prefix .yellow-h[mailto:] in the syntax.
 
 ]
 
@@ -2118,18 +2132,21 @@ class: inverse, center, middle
 
 .pull-left-c[
 - References are defined in .bib files
-    - they follow the BibTeX format
+
+  - they follow the BibTeX format
 
 <br>
 
 - `pandoc` looks for a .bib file, and for the definitions therein, to process citations
-    - .bib files are specified with the `bibliography` variable in YAML
+
+  - .bib files are specified with the `bibliography` variable in YAML
 
 <br>
 
 
 - `pandoc` can process a citation only if there is a linked entry in the .bib file
-    - but not all entries have to be cited
+
+  - but not all entries have to be cited
 
 ]
 
@@ -2149,17 +2166,20 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib.png")
 
 - A BibTeX entry consists of three elements
 
-   - a type
-       - e.g., `@article`    
+  - a type
+      - e.g., `@article`    
 <br>
-   - a citation-key
-       - e.g., `bennett2015`    
+  - a citation-key
+      - e.g., `bennett2015`    
 <br>
-   - a number of tags
-       - e.g., `title`, `author`
+  - a number of tags
+      - e.g., `title`, `author`
+
+<br>
 
 - Different tags are available for different reference types
-    - some tags are required, others are optional
+
+  - some tags are required, others are optional
     
 ]
 
@@ -2175,13 +2195,19 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
 ## References &mdash; Bibliography Database &mdash; Entries
 
 - One could create entries by hand
-    - this requires knowing the BibTeX format, entry types, tags, and related information about references to be cited
-        - this is not efficient
-    
+
+  - requires knowing the BibTeX format, entry types, tags, and related information about references to be cited
+  - neither efficient nor necessary
+
+<br>
+
 - A good alternative is to use `Google Scholar`, which provides BibTeX entries
-    - follow `cite -> BibTex` and copy
-    - paste into .bib, edit if necessary, and save
-    
+
+  - follow `cite -> BibTex` and copy
+  - paste into .bib, edit if necessary, and save
+
+<br>
+
 - Some publishers and journals provide BibTeX entries on their website as well
 
 ---
@@ -2190,19 +2216,22 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
 .pull-left-c[
 
 - Reference styles are defined in .csl files
-    - files for different styles (e.g., APA) are available at [https://www.zotero.org/styles](https://www.zotero.org/styles)
+
+  - files for different styles (e.g., APA) are available at [https://www.zotero.org/styles](https://www.zotero.org/styles)
 
 <br>
 
 - `pandoc` looks for a .csl file, and for the styles therein, to style citations and references
-    - .csl files are specified with the `csl` variable in YAML
-    - if unspecified, it uses a Chicago author-date format
+
+  - .csl files are specified with the `csl` variable in YAML
+  - if unspecified, it uses a Chicago author-date format
     
 
 <br>
 
 - .csl files affect the style only in outputs
-    - no matter which the style is used, the citation syntax in .Rmd documents remains the same
+
+  - no matter which the style is used, the citation syntax in .Rmd documents remains the same
     
 ]
 
@@ -2215,13 +2244,14 @@ knitr::include_graphics("rmd_workshop_files/images_data/csl.png")
 ]
 
 ---
-## References &mdash; In-text Citation Syntax &mdash; Author-Date
+## References &mdash; In-text Citation Syntax &mdash; Author-Date Styles<sup>*</sup>
 
 All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or minus signs introduce variation
 
-<br>
 
-.inline-c[[@bennett2015]] becomes .out-t[(Bennett, 2015)] in APA 7<sup>th</sup> edition
+.pull-left[
+
+.inline-c[[@bennett2015]] becomes .out-t[(Bennett, 2015)]
 
 .inline-c[@bennett2015] becomes .out-t[Bennett (2015)]
 
@@ -2233,6 +2263,11 @@ All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or 
 
 .inline-c[[@bennett2015 33-35]] becomes .out-t[(Bennett, 2015, pp. 33&ndash;35)]
 
+
+]
+
+.pull-right[
+
 .inline-c[[@bennett2015, ch. 1]] becomes .out-t[(Bennett, 2015, ch. 1)]
 
 .inline-c[[@bennett2015; @gilbert2019]] becomes .out-t[(Bennett, 2015; Gilbert, 2019)]
@@ -2241,8 +2276,16 @@ All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or 
 
 .inline-c[@bennett2015 [33-35]] becomes .out-t[Bennett (2015, pp. 33&ndash;35)]
 
+]
+
+.footnote[
+
+<sup>*</sup> Specifically, the outputs on this slide are formatted according to the APA 7<sup>th</sup> edition.
+
+]
+
 ---
-## References &mdash; In-text Citation Syntax &mdash; Numerical
+## References &mdash; In-text Citation Syntax &mdash; Numerical Styles
 
 All citations keys take the 'at' sign .yellow-h[@] 
 
@@ -2266,18 +2309,18 @@ Individual styles may or may not be sensitive to variation, such as square brack
 ---
 ## Citations &mdash; Reference List
 
-The list of references appears after the last line of the document, with no section header 
+The list of references appears after the last line of the output document, with no section header 
 - so that you can choose the header yourself, by ending .Rmd documents with a header of your choice
 
 ```{r eval=FALSE}
-This is the last sentence of a manuscript with an APA style.
+This is the last sentence of an APA style manuscript.
 
 ## References
 ```
 
 .out-t[
 
-This is the last sentence of a manuscript with an APA style.
+This is the last sentence of an APA style manuscript.
 
 ### References
 
@@ -2434,7 +2477,7 @@ df <- read_csv("data/journals.csv")
 
 - The list of options is available at <https://yihui.org/knitr/options>
 
-    - R Markdown Cheat Sheet provides a helpful list as well
+    - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) provides a helpful list as well
 
 
 ---
