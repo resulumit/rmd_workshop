@@ -812,12 +812,26 @@ Observe also that the document has three components
 ]
 
 ---
+## R Markdown Document &mdash; Document Toolbar
+
+Observe also that the document toolbar offers extended tools for .Rmd documents
+
+![](rmd_workshop_files/images_data/toolbar.png)
+
+<br>
+
+These include, most impotantly,
+
+- the ![](rmd_workshop_files/images_data/button_knit.png) button to compile .Rmd documents
+
+
+---
 class: action
 
 ## R Markdown Document &mdash; Compile
 
 .pull-left-c[
-- Click the `Knit` button to compile it, and observe that 
+- Click the `Knit` button to compile your .Rmd document, and observe that 
 
   - the output document has the same name as your .Rmd document
 
@@ -870,7 +884,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
   - presentations, again with `rmarkdown`
   - books, with `bookdown` ([Xie, 2021c](https://cran.rstudio.com/web/packages/bookdown/index.html))
   - websites, with `blogdown` ([Xie et al., 2021b](https://cran.r-project.org/web/packages/blogdown/index.html))
-
+  
 .footnote[
 
 <sup>*</sup> Here we will focus on research papers only. In a separate workshop, I teach how to create professional websites with R Blogdown.
@@ -3718,7 +3732,7 @@ class: action
 
 .footnote[
 
-<sup>*</sup> The following slides use the setting for LaTex and PDF documents.
+<sup>*</sup> The following slides use the setting for LaTex and PDF outputs.
 
 ]
 
@@ -3728,7 +3742,7 @@ class: action
 - `stargazer` tables look slightly different in different output formats
 
   - on the following slides, they will have the HTML look
-  - even if the slides display the setting for LaTex and PDF documents.
+  - even if the slides display the setting for LaTex and PDF outputs
 
 <br>
 
@@ -4209,22 +4223,26 @@ class: inverse, center, middle
 ## Functionality Gaps
 
 - Not everything is possible to achieve with R Markdown syntax, code chunks, and/or code
-    - e.g., centering text
+  - e.g., centering text
 
 --
 
+<br>
+
 - Workarounds available through inclusion of other languages and/or syntaxes in .Rmd documents
 
-    - e.g., incorporating HTML or LaTeX code into R Markdown
-    - workarounds might be output specific
+  - e.g., incorporating HTML or LaTeX code into R Markdown
+  - workarounds might be output specific
        - e.g., LaTeX-based workarounds may work only for LaTeX and PDF outputs
 
 --
 
+<br>
+
 - There are no exclusive list of gaps or workarounds
 
-    - these are specific to the output you want to achieve, problems you encounter
-    - after writing a few manuscripts with R Markdown, you will have addressed most typical gaps in your workflow
+  - these are specific to the output you want to achieve, problems you encounter
+  - after writing a few manuscripts with R Markdown, you will have addressed most typical gaps in your workflow
 
 ---
 ## Functionality Gaps &mdash; Examples
