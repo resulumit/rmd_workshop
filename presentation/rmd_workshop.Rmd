@@ -575,6 +575,56 @@ class: action
     - choose the free version
 
 ---
+## RStudio &mdash; R Markdown Options
+
+.pull-left-c[
+
+RStudio offers various functions that facilitate working with .Rmd documents, which can be controlled at two locations:
+
+- global settings that apply to all markdown projects, located at:
+
+> `Tools -> Global Options -> R Markdown`
+
+]
+
+.pull-right-c[
+
+![](rmd_workshop_files/images_data/window_global_options.png)
+
+]
+
+---
+## RStudio &mdash; R Markdown Options
+
+.pull-left-c[
+
+RStudio offers various functions that facilitate working with .Rmd documents, which can be controlled at two<sup>*</sup> locations:
+
+- global settings that apply to all markdown projects, located at:
+
+> `Tools -> Global Options -> R Markdown`
+
+- project settings that apply to a given markdown project, located at:
+
+> `Tools -> Global Options -> R Markdown`
+
+
+
+]
+
+.pull-right-c[
+
+![](rmd_workshop_files/images_data/window_project_options.png)
+
+]
+
+.footnote[
+
+<sup>*</sup> Some settings become available on the document toolbar as well, only when an .Rmd document is open. We will cover the [document toolbar](#toolbar) later on in the workshop.
+
+]
+
+---
 class: action
 
 ## R Packages &mdash; Install from within RStudio
@@ -812,6 +862,8 @@ Observe also that the document has three components
 ]
 
 ---
+name: toolbar
+
 ## R Markdown Document &mdash; Document Toolbar
 
 Observe also that the document toolbar offers extended tools for .Rmd documents
@@ -823,7 +875,6 @@ Observe also that the document toolbar offers extended tools for .Rmd documents
 These include, most impotantly,
 
 - the ![](rmd_workshop_files/images_data/button_knit.png) button to compile .Rmd documents
-
 
 ---
 class: action
@@ -1494,6 +1545,8 @@ class: action
 - observe the outcome
     
 `r countdown(minutes = 10, seconds = 00, top = 0)`
+
+---
 
 ---
 name: part4
