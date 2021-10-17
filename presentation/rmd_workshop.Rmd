@@ -641,7 +641,7 @@ tinytex::install_tinytex()
     - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
     
 - `stargazer` ([Hlavac, 2018](https://cran.r-project.org/web/packages/stargazer/index.html)), for tables
-    - popular alternatives: `knitr` ([Xie, 2021b](https://cran.r-project.org/web/packages/knitr/index.html)), `kableExtra` ([Zhu, 2021](https://cran.r-project.org/web/packages/kableExtra/index.html))
+    - popular alternatives: `knitr` ([Xie, 2021b](https://cran.r-project.org/web/packages/knitr/index.html)), `kableExtra` ([Zhu, 2021](https://cran.r-project.org/web/packages/kableExtra/index.html)), `huxtable` ([Hugh-Jones, 2021](https://cran.r-project.org/web/packages/huxtable/index.html))
     
 ---
 class: action
@@ -5244,14 +5244,16 @@ Gagolewski, M. (2021). [stringi: Character String Processing Facilities](https:/
 
 Hlavac, M. (2018). [stargazer: Well-formatted regression and summary statistics tables](https://cran.r-project.org/web/packages/stargazer/index.html). R package, version 5.2.2.
 
+Hugh-Jones, D. (2021).[huxtable: Easily Create and Style Tables for LaTeX, HTML and Other Formats](https://cran.r-project.org/web/packages/huxtable/index.html). R package, version 5.4.0.
+
 Sievert, C., Parmer, C.,  Hocking, T., Chamberlain, S., Ram, K., Corvellec, M., & Despouy, P. (2021). [plotly: Create Interactive Web Graphics via 'plotly.js'](https://cran.r-project.org/web/packages/plotly/index.html). R package, version 4.10.0.
+
+---
+## References
 
 Wickham, H. and Grolemund, G. (2021). R for data science. O'Reilly. Open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/).
 
 Wickham, H., François, W., Henry L. and Müller, K.(2021a). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 1.0.7.
-
----
-## References
 
 Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., Yutani, H. and Dunnington, D. (2021b). [ggplot2: Create elegant data visualisations using the grammar of graphics](https://cran.r-project.org/web/packages/ggplot2/index.html). R package, version 3.3.5.
 
@@ -5264,6 +5266,9 @@ Xie, Y. (2021b). [knitr: A general-purpose package for dynamic report generation
 Xie, Y. (2021c). [bookdown: Authoring books and technical documents with R Markdown](https://cran.rstudio.com/web/packages/bookdown/index.html). R package, version 0.24.
 
 Xie, Y., Allaire, J. J., and Grolemund, G. (2021a). R markdown: The definitive guide. CRC Press. Open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/).
+
+---
+## References
 
 Xie, Y, Dervieux, C. Presmanes Hill, A. (2021b). [blogdown: Create blogs and websites with R Markdown](https://cran.r-project.org/web/packages/blogdown/index.html). R package, version 1.5.
 
