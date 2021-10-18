@@ -762,7 +762,7 @@ Downloading process can be initiated from within RStudio
     
 <br>
 
-- R for Data Science ([Wickham and Grolemund, 2021](https://r4ds.had.co.nz](https://r4ds.had.co.nz/))
+- R for Data Science ([Wickham and Grolemund, 2021](https://r4ds.had.co.nz/))
   
    - open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/)
    
