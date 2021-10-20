@@ -2965,7 +2965,7 @@ I recommend using the second chunk for the main operations<sup>*</sup> on raw da
     - e.g., capitalizing variable names for figures
         
 ````md
-`r ''````{r, data, echo=FALSE ...}
+`r ''````{r, data, ...}
 
 df <- df_raw `%>%`
       mutate(subfield = as.factor(subfield), 
@@ -4052,7 +4052,7 @@ Create a table of regression models instead
 ````md
 `r ''````{r, regression_table, echo=FALSE, results="asis"}
 
-stargazer(`data = lm(h5_index ~ subfield, data = df)`, 
+stargazer(`data = lm(h5_index ~ issues, data = df)`, 
           type = "latex", header = FALSE,
           title = "Regression Results")
 
@@ -4062,16 +4062,19 @@ stargazer(`data = lm(h5_index ~ subfield, data = df)`,
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
-stargazer(data = lm(h5_index ~ subfield, data = df), type = "html")
+stargazer(data = lm(h5_index ~ issues, data = df), type = "html")
 
 ```
+
 ]
+
 ]
 
 ---
@@ -4084,7 +4087,7 @@ Models can also be estimated outside the function first
 ````md
 `r ''````{r, regression_table, echo=FALSE, results="asis"}
 
- `lm1 <- lm(h5_index ~ subfield, data = df)`
+ `lm1 <- lm(h5_index ~ issues, data = df)`
 
  stargazer(`data = lm1`, type = "latex", header = FALSE,
            title = "Regression Results")
@@ -4095,16 +4098,19 @@ Models can also be estimated outside the function first
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = lm1, type = "html")
 
 ```
+
 ]
+
 ]
 
 ---
@@ -4127,16 +4133,19 @@ stargazer(data = lm1, type = "latex", header = FALSE,
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = lm1, type = "html", keep.stat = c("n", "rsq"))
 
 ```
+
 ]
+
 ]
 
 ---
@@ -4159,16 +4168,19 @@ stargazer(`data = list(lm1, lm2)`, type = "latex",
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"))
 
 ```
+
 ]
+
 ]
 
 ---
@@ -4193,18 +4205,21 @@ stargazer(data = list(lm1, lm2), type = "latex",
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           dep.var.labels = "H5 Index",
           covariate.labels = c("Issues", "English"))
 
 ```
+
 ]
+
 ]
 
 ---
@@ -4230,11 +4245,12 @@ stargazer(data = list(lm1, lm2), type = "latex",
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           dep.var.labels = "H5 Index",
@@ -4242,7 +4258,9 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           star.cutoffs = c(0.05, 0.01, 0.001))
 
 ```
+
 ]
+
 ]
 
 ---
@@ -4272,7 +4290,8 @@ class: inverse, center, middle
 ## Functionality Gaps
 
 - Not everything is possible to achieve with R Markdown syntax, code chunks, and/or code
-  - e.g., centering text
+
+  - e.g., centering text, increasing the space between the lines of text
 
 --
 
@@ -4418,11 +4437,12 @@ stargazer(data = list(lm1, lm2), type = "latex",
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           dep.var.labels = "H5 Index",
@@ -4431,7 +4451,9 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           label = "regression_results")
 
 ```
+
 ]
+
 ]
 
 
@@ -4614,6 +4636,7 @@ class: inverse, center, middle
     - typically written over a long period of time, in numerous sittings
     - at the end of every sitting, essentially a different version of the same manuscript is created
     
+<br>
 
 - With many versions created over time, there emerge at least two challenges
 
@@ -4622,9 +4645,10 @@ class: inverse, center, middle
 
 --
 
+<br>
 - We all version control, in different ways, such as
 
-   - edit, rename, save
+   - edit, rename, and save the files
    - use applications or websites such as Dropbox, Google Docs, Overleaf
    - use distributed version control systems such as Git and GitHub
 
@@ -4653,9 +4677,11 @@ manuscript
 
 - Git
     - a software that keeps track of versions of a set of files
-    - it is *local* to you, the records are kept on your computer
+    - it is *local* to you; the records are kept on your computer
 
 --
+
+<br>
 
 - GitHub
     - a hosting service, or a website, that can keep the records
@@ -4663,6 +4689,8 @@ manuscript
     - but unlike Dropbox, GitHub is specifically structured to keep records with Git
 
 --
+
+<br>
 
 - Repository, or repo
     - a set of files whose records are kept together, by Git and/or on GitHub
@@ -4672,15 +4700,17 @@ manuscript
 ## Version Control &mdash; Git and GitHub &mdash; Definitions
 
 - To commit
-    - to take a snaphot of, or to version, a repository
+    - to take a snapshot of, or to version, a repository
     - it is like saving a new version of all files and sub-folders in your project folder with a new name
-    - it is local, the records are kept on your computer unless you `push`
+    - it is local, the records are kept on your computer unless you push
 
 --
 
+<br>
+
 - To push
-    - to move the records from Git to GitHub, from your computer to online server
-    - it is like uploading (the new versions of) your files and sub-folders to a website, 
+    - to move a copy of the records from Git to GitHub, from your computer to online server
+    - it is like uploading (the new versions of) your files and sub-folders to a website
     - it also involves merging, if this not the first push
 
 .footnote[
@@ -4698,7 +4728,7 @@ Version control with Git and GitHub requires
     - unless for a new computer or, if ever, a new GitHub account
     - a bit technical, but worth the hassle
     
-2. .yellow-h[project setup], repeated for every paper
+2. .yellow-h[project setup], repeated for every RStudio project
     - shorter, less complicated
 
 .footnote[
@@ -4718,11 +4748,16 @@ class: action
 
 > `Tools -> Global Options -> Git/SNV -> Enable version control interface for RStudio projects`
 
-- RStudio will likely find Git automatically. In case it cannot, Git is likely to be at
+<br>
 
-    - `c:/Program Files/Git/bin/git.exe` on Windows
+- RStudio will likely find Git automatically
 
-    - `/usr/local/git/bin/git` on Mac
+ - In case it cannot do so on its own, help RStudio find it by clicking `Browse...`
+ - Git is likely to be at
+
+      - `c:/Program Files/Git/bin/git.exe` on Windows
+
+      - `/usr/local/git/bin/git` on Mac
 
 ---
 class: action
@@ -4730,7 +4765,7 @@ class: action
 ## Version Control &mdash; Git &mdash; Initial Setup
 
 
-2) Set Git Bash as your shell (Windows-only step)
+2) If you are using Windowns, set Git Bash as your shell
 
 - from the RStudio menu, follow:
 
@@ -4772,10 +4807,12 @@ class: action
 
 > `Tools -> Version Control -> Project Setup... -> Version Control System -> Git`
 
+<br>
 
 - after confirming your new repository, and restarting the session, observe that 
 
-   - now there is now a Git tab in RStudio, documenting the differences between you local repository and the one on GitHub. When you change a file, it will appear here.  
+   - now there is now a Git tab in RStudio
+      - newly-added and/or edited files, since the last commmit, are listed here 
    
    - your project now includes a `.gitignore` file
        - this is where you can list files and/or folders to be excluded from being tracked
@@ -4797,13 +4834,14 @@ class: action
 
 > `Repositories -> New -> Repository name (e.g., "rwd_workshop") -> Public -> Create repository`
 
-- observe that
+<br>
 
-    - repository URLs have the following structure: https://github.com/USER_NAME/REPOSITORY_NAME
-    
-        - this is the address to view the repository online
-        - for use in the `Terminal`, the address gets the `.git` extension
-            - e.g., https://github.com/USER_NAME/REPOSITORY_NAME.git
+- observe the structure of the repository address
+
+  - e.i., https://github.com/USER_NAME/REPOSITORY_NAME
+  - this is the address to view the repository online
+  - for use in the `Terminal`, the address gets the `.git` extension
+     - e.i., https://github.com/USER_NAME/REPOSITORY_NAME.git
 
 ---
 class: action
@@ -4816,10 +4854,10 @@ class: action
 
 > `Tools -> Terminal -> New Terminal`
 
-- enter the following lines in the `Terminal`, with your username and repository name
+- enter the following lines in the `Terminal`, with .yellow-h[your username and repository name]
 
 ```yaml
-git remote add origin https://github.com/USER_NAME/REPOSITORY_NAME.git
+git remote add origin https://github.com/`USER_NAME/REPOSITORY_NAME`.git
 git add .
 git commit -m "first commit"
 git push -u origin master
@@ -4874,13 +4912,15 @@ name: git-github-basic-workflow
     - under the Git tab in RStudio, find the list of files that you edited since the last push
     - these will have `M`, for modified, as `Status`     
 
+<br>
+
 2) Commit and Push
 
 - tick `Staged` for one or more files that you would like to commit
-    - enter a `Commit message` that summarises the edits
-    - click `Commit` to create a record of the new version locally to your computer
-    - click `Close -> Push` to push the version to GitHub
-
+  - enter a `Commit message` that summarises the edits
+  - click `Commit` to create a record of the new version locally to your computer
+  - click `Close -> Push` to push the version to GitHub   
+<br>
 - observe the changes in the Git tab in RStudio and on the GitHub repository
 
 ---
@@ -4893,11 +4933,15 @@ name: git-github-basic-workflow
 
 --
 
+<br>
+
 - `.gitignore` lists one item per line
 
     - each line has a pattern, which determines whether one or more files or folders are to be ignored
 
 --
+
+<br>
 
 - See the documentation at <https://git-scm.com/docs/gitignore> 
 
@@ -4906,16 +4950,16 @@ name: git-github-basic-workflow
 ---
 ## Version Control &mdash; Git and Github &mdash; `.gitignore`
 
-- There might be good reasons to ignore some others, including files
+There are good reasons to ignore some others, including files
 
-    - that contain information that we do not want others to see
-        - e.g., personal API keys    
+- that contain information that we do not want others to see
+    - e.g., personal API keys    
 <br>
-    - that we do not have the right to share with others
-        - e.g., secondary data with user agreements otherwise    
+- that we do not have the right to share with others
+    - e.g., secondary data with user agreements otherwise    
 <br>
-    - that we (re-)create automatically as outputs
-        - e.g., `journals.pdf`, as opposed to journals.Rmd
+- that we (re-)create automatically as outputs
+    - e.g., `journals.pdf`, as opposed to journals.Rmd
         
 ---
 ## Version Control &mdash; Git and Github &mdash; `.gitignore`
@@ -5288,18 +5332,24 @@ class: action
 40) Non-simultaneous Collaboration
 
 - take in turns with your partner to work on the same document (of the same project)
-    - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
-    - *owner and collaborator*: observe the changes, if any, on your own `.Rmd` file, and/or on your GitHub repository
+
+  - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
+    
+  - *owner and collaborator*: observe the changes, if any, on your own `.Rmd` file, and/or on your GitHub repository
         - click on the relevant commit message on GitHub and observe the commit
-    - *collaborator*: pull, revert the header back to original, save, commit, and push
+        
+  - *collaborator*: pull, revert the header back to original, save, commit, and push
 
 `r countdown(minutes = 5, seconds = 00, top = 0)`
 
---
-
-- notice that you have not encountered any errors and/or merge conflicts
-    - because everyone edited and merged with an up-to-date document
-    - this is the default scenario in single-author, multiple computer scenario
+---
+## Exercise &mdash; 40 &mdash; Notes
+ 
+Notice that you have not encountered any errors and/or merge conflicts
+    
+- because everyone edited and merged with an up-to-date document
+    
+- this is the default scenario in single-author, multiple computer scenario
 
 ---
 class: action
@@ -5315,11 +5365,15 @@ class: action
 
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
---
+---
+## Exercise &mdash; 41 &mdash; Notes
 
-- notice that you have encountered an error but not a merge conflict
-    - pulling before pushing solves the problem because the edits are not on the same line
-    - the merge takes place automatically, on the *local* repository of the last pusher
+Notice that you have encountered an error
+    
+- pulling before pushing solves the problem because the edits are not on the same line
+  - hence, this is not a merge conflict
+    
+- the merge takes place automatically, on the *local* repository of the last pusher
 
 ---
 class: action
@@ -5330,20 +5384,29 @@ class: action
 
 - work on the same document at the same time
     - *owner*: edit the first header in the document again, save, commit, and push
+    
     - *collaborator*: edit the first header in the document as well, save, commit, and push
-        - observe the error message that the last pusher will receive, follow the instructions on RStudio to solve the problem
+    
+- observe the error message that the last pusher will receive
+  - follow the instructions on RStudio to solve the problem
+  - google if necessary
 
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
---
+---
+## Exercise &mdash; 42 &mdash; Notes
 
-- notice that you have encountered not only an error but also a merge conflict
-    - pulling before pushing alone does not solve the problem because the edits are on the same line
-        - the conflict cannot be solved automatically &mdash; it needs human intervention
-        - by pulling first, you can view the conflict directly on the file
-            - marked between less than <span style="background-color: #ffff88;">&lt;</span> and greater than <span style="background-color: #ffff88;">&gt;</span> signs, divided by the equal signs
-            - solution is to accept the remote version, by deleting your edit and or moving that edit to a different line
-    - merging takes place on the *local* repository of the last pusher
+Notice that you have encountered not only an error but also a merge conflict
+
+- pulling before pushing alone does not solve the problem because the edits are on the same line
+
+  - the conflict cannot be solved automatically &mdash; it needs human intervention
+
+- nevertheless, by pulling first, you can view the conflict directly on the file
+  - marked between less than <span style="background-color: #ffff88;">&lt;</span> and greater than <span style="background-color: #ffff88;">&gt;</span> signs, divided by the equal signs
+  - solution is to accept the remote version, by deleting your edit and or moving that edit to a different line
+    
+- the merge takes place on the *local* repository of the last pusher
 
 ---
 ## Colloboration &mdash; Git and Github &mdash; Workflow &mdash; Alternative
