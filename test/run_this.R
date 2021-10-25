@@ -20,8 +20,8 @@ download.file(url = "https://raw.githubusercontent.com/resulumit/rmd_workshop/ma
 # note: this will run only if the previous steps are successfully completed
 if (all(c("rmarkdown", "tinytex", "dplyr", "ggplot2", "stargazer") %in% 
         installed.packages()) & 
-        tinytex:::is_tinytex() & 
-        file.exists(file = "the_test.Rmd")) rmarkdown::render("the_test.Rmd", "pdf_document")
+    tinytex:::is_tinytex() & 
+    file.exists(file = "the_test.Rmd")) rmarkdown::render("the_test.Rmd", "pdf_document")
 
 # if everything works, there will appear a new file, titled the_test.pdf, in your working directory
 # you may then wish to delete these test files, by uncommenting and running the following line of code
