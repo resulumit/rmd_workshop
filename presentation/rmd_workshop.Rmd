@@ -738,7 +738,7 @@ name: rstudio-project
 ---
 class: action
 
-## [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) &mdash; Download from the Internet
+## R Markdown Cheat Sheet &mdash; Download from the Internet
 
 Downloading process can be initiated from within RStudio
 
@@ -2125,7 +2125,7 @@ A pair of carets introduces superscript
 ]
 
 ---
-## Syntax &mdash; Sub- and Super-scripts
+## Syntax &mdash; Subscript and Superscript
 
 .pull-left[
 
