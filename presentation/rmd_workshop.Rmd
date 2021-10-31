@@ -1837,7 +1837,7 @@ class: action
 7) Headers
 
 - see `reproduce_this.pdf`: pages 1 to 11
-    - 11 headers, Abstract to References    
+    - 10 headers, Abstract to References    
 <br>    
 - apply in `journals.Rmd`
 
@@ -2108,7 +2108,7 @@ Three hyphens grouped together introduce an em-dash
 .inline-c[&#8208;&#8208;&#8208;] becomes .out-t[&mdash;]
 
 ---
-## Syntax &mdash; Subscript and Superscript
+## Syntax &mdash; Subscripts and Superscripts
 
 .pull-left[
 
@@ -2125,7 +2125,7 @@ A pair of carets introduces superscript
 ]
 
 ---
-## Syntax &mdash; Subscript and Superscript
+## Syntax &mdash; Subscripts and Superscripts
 
 .pull-left[
 
@@ -2148,8 +2148,6 @@ Notice that
 - the syntax here (Markdown-based) is different than the one for equations (LaTeX-based)
     - e.g., <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">R&#94;2&#94;</span> versus <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"> mc^{2}</span>
 
-
-
 ]
 
 ---
@@ -2171,7 +2169,7 @@ class: action
 
 <br>
 
-15) Sub- and Super-scripts
+15) Subscripts and Superscripts
 
   - see `reproduce_this.pdf`: page 2
   - apply in `journals.Rmd`: paragraph 5
@@ -4895,7 +4893,7 @@ name: version-control-workflow
 
 .footnote[
 
-<sup>*</sup> To stage is to add files to be comitted. It allows us to commit files individually or together with other files.
+<sup>*</sup> To stage is to add files to be committed. It allows us to commit files individually or together with other files.
 
 ]
 
@@ -5139,13 +5137,13 @@ class: action
 - imagine that, after producing all these tables and figures, and writing up your results, you have decided to exclude journals from Oceania from analysis
    - hint: use the `filter` function in the data chunk  
    - create a new version of the manuscript
-   - comit and push to GitHub
+   - commit and push to GitHub
    
 36) Gitignore
 - stop tracking `journals.pdf`
     - change `.gitignore`
     - remove `journals.pdf` from cache
-    - comit and push to GitHub
+    - commit and push to GitHub
 
 
 `r countdown(minutes = 5, seconds = 00, top = 0)`
