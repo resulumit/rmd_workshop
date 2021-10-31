@@ -2,7 +2,7 @@
 title: "Writing Reproducible Research Papers with R Markdown"
 subtitle: "Resul Umit"
 institute: ""
-date: "October 2021"
+date: "November 2021"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -104,7 +104,7 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 ### Resul Umit
 
-### October 2021
+### 1 November 2021
 
 .footnote[
 
