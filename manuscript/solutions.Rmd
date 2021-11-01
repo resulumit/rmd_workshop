@@ -1,0 +1,273 @@
+---
+title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
+subtitle: "A Mock Paper for an R Markdown Workshop"
+author: "Jane Doe^[Department of Science, University of Random. Email: <jane.doe@random.edu>. Website: [www.janedoe.com](https://www.janedoe.com).]"
+date: "4 March 2020"
+bibliography: "references.bib"
+csl: "apa_7th.csl"
+output: pdf_document
+link-citations: yes
+numbersections: true
+header-includes:
+    - \usepackage{setspace}
+---
+
+```{r, setup, include=FALSE}
+
+# chunk option defaults
+knitr::opts_chunk$set(echo=FALSE, message=FALSE)
+
+# packages
+library(dplyr)
+library(ggplot2)
+library(stargazer)
+
+# data
+df_raw <- read.csv("../data/journals.csv")
+
+```
+
+```{r, data}
+
+df <- df_raw %>%
+      mutate(subfield = as.factor(subfield), 
+             english = as.factor(english),
+             age = 2020 - since) %>%
+      select(-since)
+
+```
+
+```{r, models}
+
+lm1 <- lm(h5_index ~ issues, data = df)
+lm2 <- lm(h5_index ~ issues + english, data = df)
+lm3 <- lm(h5_index ~ issues + english + subfield, data = df)
+lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
+
+```
+
+<!-- header 1 -->
+# Abstract {-}
+
+<!-- paragraph 1 -->
+Laoreet est, at turpis, et et sodales in volutpat arcu magna massa. At, rutrum felis fringilla. Turpis aliquam ante dictum, viverra. Aliquam velit auctor efficitur nascetur diam. Quis eu donec. Auctor curabitur ut. Elementum est sed et. Curae cras ac nibh.\
+Habitant ante, dolor pharetra egestas montes ornare ut iaculis?Odio lectus quisque dapibus turpis sit, cursus in interdum in, magna sapien.Ac eget mattis, in suspendisse tempus lacinia, sed ullamcorper. Scelerisque nunc ut iaculis porta turpis bibendum pretium. Accumsan vestibulum lorem, vestibulum consequat urna eu, cum finibus nulla semper suscipit vulputate. Urna facilisis volutpat metus ut sociis vitae in lorem nibh. Ipsum vel, maximus maecenas in a. Aptent congue, rutrum nisl ridiculus at. Lectus ac tincidunt eu at netus ut, ipsum lacinia a aliquam sapien. Vel egestas purus nibh consequat orci. Dui, eu, nisi sociis enim mi et sodales purus. Quam maecenas ligula elementum neque. Sociis curae viverra lorem vitae in natoque ut.
+
+<!-- block quote -->
+> Lorem ipsum dolor sit amet, eros nibh eget mollis.
+>
+> Tincidunt Cubilia
+
+\onehalfspacing
+<!-- header 2 -->
+# Introduction
+
+<!-- paragraph 2 -->
+Vestibulum, **sociis ipsum**. Massa, sed ac eu fringilla sed luctus sodales, sit porttitor non. Iaculis litora, accumsan facilisis lacinia laoreet rhoncus pellentesque sed. At, viverra enim proin quis neque efficitur. Quam sit est sed at ut aliquam. Condimentum efficitur ultricies tincidunt dui porta faucibus feugiat nec montes. Tincidunt congue quisque libero parturient gravida molestie et. Dolor felis sed, neque tempus tincidunt dapibus vestibulum in vehicula. Ac mollis mus scelerisque per gravida. Fusce curabitur in venenatis suscipit fames mi magna magna. Cubilia suspendisse dolor eu eget congue enim in sed. In nullam etiam cum iaculis maecenas nulla ac. Sem adipiscing sed sed dolor mollis magnis mauris platea velit natoque *consequat in cubilia*.
+
+<!-- paragraph 3 -->
+Eu sodales phasellus nullam ornare, est ligula. [^1] Suspendisse facilisi habitasse eget tristique at et pellentesque sed. Amet, luctus ex faucibus dapibus enim ac mauris. Commodo nec nisl vel massa justo condimentum blandit lobortis. Lectus suspendisse tempus at nec fusce facilisis tempor. Feugiat maecenas turpis amet non ultricies, inceptos lacinia. Justo fames cum tortor blandit, aliquet ac semper. Malesuada risus nulla id ultrices, enim orci, eu et, faucibus ornare nec justo. Sit pharetra justo habitant sociosqu augue, turpis ut ut integer.^[Non at cubilia ut at nisi].
+
+<!-- footnote 1 -->
+[^1]: In nunc eu libero arcu posuere varius. Donec nascetur sagittis volutpat et quis quis lectus. Id et cursus ridiculus, sed, hendrerit nisi mauris per! Tincidunt, sed pellentesque, enim sem condimentum justo augue conubia sed. Convallis scelerisque ultricies sed nunc bibendum. Quisque, feugiat sed nisl. Justo et ridiculus nunc interdum dictumst et suscipit morbi lorem quisque elementum risus nisl? Eu mi consequat adipiscing, amet auctor porttitor litora egestas turpis quam amet. Nunc et torquent, enim, ut sed auctor.
+
+<!-- paragraph 4 -->
+[Literature Review](#literature-review), dolor eget orci integer gravida. Efficitur et augue facilisis turpis, neque pharetra venenatis ut. Tempus ut sapien dui habitasse ac enim sit elit amet. Ut consequat consectetur ut, donec amet sed. Vel, ut senectus vestibulum donec vitae. Duis euismod, ultrices quis proin tristique ac felis morbi. Duis elementum phasellus in, sociis nec, ut torquent, in duis venenatis ligula. Tristique morbi dictum suspendisse pellentesque vehicula aliquet. Tincidunt ac nunc fames. Faucibus ultrices ut ut nisl quam nibh ligula sollicitudin. Ut justo non lobortis efficitur, ligula eu risus nisi venenatis lacus felis gravida elit. Results neque lorem rhoncus nec, facilisis class lectus.
+
+<!-- paragraph 5 -->
+Varius R^2^ natoque dolor nisl donec nostra id dictum turpis. Nisi dignissim sed nec nam mi porttitor quam sit. Iaculis magna vel nullam in commodo ante nunc habitant. Luctus ex sapien ac molestie, vel amet et ac. Molestie velit in commodo, leo ridiculus mauris nunc, in in. Consectetur eu a. Dictumst consequat erat amet non ut tristique maecenas. Et congue. Faucibus convallis felis metus aptent curae. Sed est eros, nostra eget nam ut nam. Gravida ex mi nec ut ultrices ut nisl turpis amet felis.Finibus luctus molestie donec laoreet, ante curae eleifend commodo. Tempus efficitur enim turpis sociis. Habitant mollis. In nulla, curae condimentum erat penatibus dapibus leo orci enim. Rhoncus egestas laoreet eros turpis. Pretium finibus iaculis praesent, viverra sed suscipit ut in. Morbi fusce faucibus phasellus nullam massa. Lobortis nulla, in, vel CO~2~.
+
+<!-- paragraph 6 -->
+Nisl sed ridiculusn 12--13, ut habitant vitae tempus diam, viverra sociis. Nostra metus amet arcu dui ac vehicula maecenas, augue vulputate. Netus, convallis et cum ultrices, consequat ac etiam. Eget sed viverra mauris pellentesque nibh! Malesuada ipsum pellentesque in mus massa, phasellus luctus tempus sit torquent feugiat. Pellentesque lorem nulla eleifend aliquet aliquet class rutrum neque sociosqu augue in ridiculus. Ut massa malesuada et in fusce dolor faucibus. Massa vestibulum consectetur nam nam. Sit porttitor nunc ante curabitur mattis justo. At faucibus ligula maximus aliquam tempus primis vehicula porta faucibus. Lectus rutrum maximus penatibus. Est velit integer libero pellentesque et dolor netus sed. Dignissim tincidunt, dignissim cum. Nunc in nunc est sapien donec in sagittis condimentum condimentum ullamcorper nulla magna. Sed ad cum sed varius enim adipiscing mollis torquent, vitae, ut tempus. Sed dictum non hendrerit in --- urna, non quis in cum sit turpis viverra vel nullam.
+
+<!-- header 3 -->
+# Literature Review
+
+<!-- paragraph 7 -->
+Sit nunc auctor at id diam [@bennett2015]. Tempus platea eu. Scelerisque facilisis rhoncus eu lacus vivamus ac, ut. Orci nec metus nullam sed et quis. Magnis in vitae, feugiat eleifend dignissim vitae. Leo hac sed suscipit quis rhoncus nunc tincidunt. Mi nibh lectus faucibus tellus diam sed, convallis. Velit at class velit dis lorem taciti morbi in nunc aliquam tristique fames sed. Eu lectus gravida congue augue id semper magna libero [@gilbert2019 216].
+
+<!-- paragraph 8 -->
+[-@gilbert2019] sed et natoque, donec pulvinar sollicitudin quisque vivamus. Tortor, lacus morbi at dui aenean amet laoreet elit. Viverra magna litora magna, sapien. Donec mi class in integer. Nulla vel ullamcorper tristique dis et, sociosqu vel. Pellentesque at mauris pellentesque volutpat non purus aenean quam. Congue interdum, id amet class libero, ac velit neque. Vitae odio nisl in et, proin, sed sit. Est fames mus pellentesque sagittis velit [for example, see @bennett2015].
+
+<!-- paragraph 9 -->
+[-@xie2019 12] 'mus auctor' ipsum. Himenaeos metus in fames aliquam. Erat et eget ut ipsum augue tincidunt elit venenatis. Dapibus in malesuada, tincidunt rhoncus nostra. Orci in, vestibulum. Ullamcorper sem conubia in. Molestie eu taciti non consequat. Et eu enim montes class leo varius parturient ridiculus nec. Sem nostra, convallis condimentum netus finibus blandit pellentesque justo morbi tempor. Hendrerit ut commodo dictumst magnis purus amet neque pellentesque himenaeos. Pharetra et odio aptent velit. Faucibus tristique maecenas dis maximus in dapibus. Et felis justo orci sit eu est tincidunt facilisis convallis. Cubilia nisl enim amet sociis sed platea habitasse pellentesque. Sodales non suscipit, eros consectetur. Vel suspendisse purus congue sed sed ut et. Ultrices ut sem. Urna volutpat vivamus velit, consectetur molestie turpis in [@bennett2015; @delgado2010].
+
+<!-- paragraph 10 -->
+Elit platea faucibus massa diam quis vel. Lorem id sit pretium erat convallis vel sed quam. Porttitor lacus aliquet dignissim dis, nibh tincidunt sed aenean, egestas, sed maecenas sit odio. Lobortis fames mauris ac nulla blandit cras mollis. Tempus, placerat metus conubia leo egestas. Nunc euismod torquent cursus volutpat natoque. Fermentum taciti tempus ante lorem sem. Sit in rhoncus cras ante in et cras vestibulum quam nam. Et sed odio. Nisl ut finibus purus malesuada in turpis natoque in. In sed duis at finibus, sed nibh nunc. Aliquam nisl amet magnis curae at in. Ac, vehicula maecenas pretium nibh lacinia nisi odio sit. Magna pellentesque maecenas ut pellentesque nullam nascetur mollis et. Ligula nibh etiam elit lacus mauris vel sagittis lacinia. Ut tincidunt lorem leo sodales ac enim id. Facilisi ridiculus turpis diam a montes eros. Erat urna ante vel nunc eu eros quis conubia massa, a sed, at non.
+
+<!-- list -->
+-   Arcu platea velit non malesuada ac magna.
+    -   Neque convallis egestas vehicula, nascetur dapibus auctor.
+-   Suspendisse semper erat magnis.
+    -   In fermentum felis et, tincidunt ridiculus est accumsan velit non.
+
+<!-- paragraph 11 -->
+Tellus sapien, eu orci ac, leo senectus in luctus elementum. Tempus, gravida at erat litora cubilia, eget suspendisse donec. Eu aptent magnis id odio ut. Aliquam tempus tincidunt sed ligula nec turpis ipsum massa vitae sollicitudin mi. Conubia sed malesuada interdum tempus. Vestibulum lorem dis, feugiat quam facilisis. Ac, habitant dictum adipiscing ut, metus ante nibh imperdiet non dapibus. Vitae sapien eu pulvinar cursus ac. Sed sapien et a ipsum sed enim eget. Tempor eu mattis, fringilla id eros ut \autoref{markdown_table}.
+
+<!-- table 1 -->
+| Author          | Year | Design       | Journal           |
+|-----------------|------|--------------|-------------------|
+| Benett          | 2015 | Experimental | Journal of Bone   |
+| Delgado & Perry | 2010 | Descriptive  | Journal of Route  |
+| Gilbert         | 2019 | Predictive   | Journal of Ground |
+
+: Existing publications in journals \label{markdown_table}
+
+<!-- paragraph 12 -->
+Natoque donec lacinia scelerisque nisl est ut laoreet cras. Quisque nulla eu viverra purus lorem a. In praesent, augue finibus velit, nascetur integer? Aenean libero dictumst arcu aliquet at cum maximus, ornare, non fermentum viverra. Ac et class id massa fusce nascetur purus lacus. Sed nec tincidunt aptent eros netus praesent ligula sociis. Dui fermentum sed at tortor adipiscing. Urna hac vel eu ipsum mattis et sem praesent porta maecenas. Nulla nunc rutrum primis mollis ac nam, sed sed nulla. Ligula sed hac in curabitur, justo nec, aliquet habitant. Aenean mollis egestas ut lectus elit nibh nec, pellentesque nunc. Interdum auctor. Sem senectus nec sed in, sagittis pharetra in augue, ut. Pharetra ut, arcu donec curabitur duis ut maecenas at. Imperdiet aliquet aptent maximus posuere condimentum feugiat, vitae maximus volutpat. Condimentum, nibh aenean et tincidunt. Vestibulum tempor purus mattis sit sit vel? Metus, hendrerit laoreet, elit egestas phasellus sed quam iaculis tristique. Aliquam consectetur ornare vestibulum quam at integer. Curae et, cum ut placerat ut. Quisque sagittis gravida consequat mattis vitae, rhoncus egestas iaculis in montes.
+
+<!-- header 4 -->
+# Theory and Hypotheses
+
+<!-- paragraph 13 -->
+Non, posuere posuere egestas. Vel, risus imperdiet ac ipsum. Amet, vel ultricies ut finibus parturient egestas. Et urna mi sed pulvinar phasellus vitae arcu, arcu tristique auctor sed litora! Congue eu eu non vel mus egestas varius accumsan ante et. Mattis pretium elementum lacinia ullamcorper, amet tempus ante eleifend egestas. Primis purus sit a arcu in non, amet rutrum. Ipsum iaculis aliquet dignissim amet felis augue ut. Accumsan sodales nulla lobortis eu aliquam facilisi, eu viverra morbi, iaculis ultrices, donec ac. Laoreet fringilla sit ut venenatis commodo aliquam pharetra. Molestie mus ante, in amet metus quam.
+
+<!-- header 5 -->
+## First Hypothesis
+
+<!-- paragraph 14 -->
+Quis elit in tristique, hendrerit blandit nec risus purus. Dapibus montes finibus amet, eu sit sit. Eu elementum euismod lacinia ipsum per natoque ipsum. Nec, non conubia placerat arcu ac habitant purus, nascetur, cursus, sed non eu. Consequat eu in bibendum platea scelerisque mollis. Amet nulla, dui. Cum luctus auctor, justo sapien a sollicitudin in eu. Ipsum nam proin eu maximus dui egestas diam vehicula leo, porta? Sit dictum mus turpis consequat magna. Sed hac netus ac. Magnis blandit eleifend in sed, vivamus vivamus libero, adipiscing pharetra phasellus non egestas. Dui porttitor, rhoncus, ac a aptent rhoncus augue a? Ac leo sed, erat dui a. A tempus senectus dignissim in ut, nisl egestas nunc rhoncus posuere eu sed sociosqu. Ut lacus a, mauris sed. Vivamus enim nulla per nisl. Sodales quam.
+
+<!-- hypothesis 1 -->
+> H1: *Suspendisse suspendisse nisi tellus sagittis mus vel lectus tempor*.
+
+<!-- paragraph 15 -->
+Ut at vitae sodales justo. Placerat in natoque sit convallis ligula primis, ipsum urna convallis. Sed elit magna, orci natoque porta, dis nostra commodo et lobortis massa sed. Nulla nunc sed et nec malesuada nunc tellus auctor conubia a vel. Maximus nibh commodo vel, non libero interdum feugiat porta aliquam dictumst facilisis? Vel eu felis metus, sed dictumst nibh. Suscipit lectus proin augue nulla tempor sed. Nisi ornare sed proin. Nullam non nisi metus mattis non tincidunt congue ac aliquam morbi. Tempor suspendisse porta, et tincidunt, quam phasellus a erat vel. Vitae libero, per curabitur lorem nulla tristique vestibulum tempor blandit.
+
+<!-- header 6 -->
+## Second Hypothesis
+
+<!-- paragraph 16 -->
+Ipsum imperdiet et pellentesque suspendisse. Nostra condimentum turpis varius. Condimentum luctus ante, porttitor, laoreet a nostra, tempus habitasse. Integer sed. Interdum duis diam integer ut mauris et turpis purus. Sed sit vitae. Et diam lacus velit fusce urna. Ut nunc, ligula eu curae fringilla tincidunt nullam. Condimentum auctor vitae eleifend nibh pharetra conubia in sed lacus ut et nascetur velit, risus nunc. A netus. Sed justo. Eu eros non sit auctor diam. In vestibulum eros mus.
+
+<!-- hypothesis 2 -->
+> H2: *Conubia, vivamus nec mauris risus nec commodo*.
+
+<!-- paragraph 17 -->
+Nisi velit sem, sollicitudin nam ut, ac vitae et sed sed lobortis sapien. Amet, blandit bibendum accumsan, a nulla sed aptent eu, semper. Non nisl at aliquam vitae per ut lorem congue eros, elit nascetur mauris. Pharetra fusce congue felis primis, iaculis consectetur amet bibendum. Condimentum libero metus faucibus tincidunt ut mi ullamcorper phasellus. Odio sed, integer sagittis non eu malesuada eu. Sit lectus sed class sagittis dictumst, class faucibus ex. Ac velit quam himenaeos mollis elit.
+
+<!-- paragraph 18 -->
+Nulla et penatibus velit a eu, ultricies donec mi. Nec finibus, justo et eu, non. Velit risus pulvinar commodo tortor aptent in risus ac, magnis ex sit. Pharetra, aenean maximus, ut viverra efficitur nulla. Tincidunt non erat feugiat iaculis nullam tincidunt mauris. Neque lacinia lacus suspendisse fringilla eu pharetra nisi libero at accumsan. Mauris nulla a nam. Ac elit congue suspendisse magna dictumst, interdum ut ex. Ullamcorper in ut lacus cum maximus magnis facilisis rhoncus lacus suscipit. Nunc himenaeos arcu a. Sed metus eget sed lacinia in parturient arcu molestie laoreet.
+
+<!-- paragraph 19 -->
+Eget luctus interdum metus aliquet fames nisi varius hendrerit sit donec. Interdum diam ac sed purus mi. A augue aliquet natoque odio sagittis tincidunt a maecenas. Netus proin tempor aptent maecenas, congue. A sit, leo mi litora vel interdum, ligula tempor nullam mauris sed. Ligula vivamus hac lacinia donec sodales vestibulum, class. Amet penatibus, porttitor, auctor. Nec, justo turpis nisl ligula. In scelerisque aenean eros rhoncus nulla, tincidunt a. Congue in non faucibus congue magnis nunc sed. Lacinia, felis nisi mauris quisque sed bibendum cum vestibulum risus. Nulla eleifend quam maximus himenaeos arcu, malesuada, cubilia erat. Non nec auctor, hendrerit tincidunt duis sed convallis non, consequat. Ridiculus rutrum morbi, vestibulum \autoref{g_scholar}.
+
+<!-- figure 1 -->
+```{r, screenshot, fig.align="center", out.width="60%", fig.cap="A screenshot of the Google Scholar homepage. \\label{g_scholar}"}
+
+knitr::include_graphics("../image/google_scholar.png")
+
+```
+
+<!-- paragraph 20 -->
+Magna porta proin duis in porta ante. Cubilia enim, maecenas risus vestibulum gravida sit nibh. Aenean luctus ut nunc dui taciti sed quis nulla. Vitae, nulla tellus porttitor semper. Habitant, sed habitant. In mi sed lacinia felis lobortis vel id. Etiam justo ullamcorper id. Nullam blandit fringilla sed. Conubia purus nec fermentum sed vel nulla sit sollicitudin nulla lacus. Arcu sed, eros senectus vitae varius mauris dictumst in. Tristique ut urna et ut amet dis risus? Platea ligula bibendum duis porttitor ut orci hac senectus. Nec sed ex, nisi non sagittis auctor ac phasellus mi in sed. Nostra sapien et aliquam luctus proin nec turpis tortor inceptos. Id in rutrum dictumst mattis congue dolor, vitae, pharetra non et. Sem urna natoque ex lorem et, duis commodo ut nullam. Eros ornare ridiculus felis eleifend ullamcorper sed ut, lorem, cursus. Etiam eros quis tristique tincidunt vel ante facilisis, eget. Gravida quis senectus molestie sed est, eu. Dignissim venenatis egestas sed, diam mauris vestibulum turpis. Eu dictumst nullam sapien at per sed eget vitae. Sed justo eros ut vitae etiam elit suscipit. Habitant enim pharetra in, augue lectus sed tortor at?
+
+<!-- header 7 -->
+# Data and Methods
+
+<!-- paragraph 21 -->
+There are `r nrow(df)` observations in the dataset. Egestas nullam, et mauris inceptos sed scelerisque. Sollicitudin scelerisque in enim sapien pellentesque hendrerit eget cum, tellus. Nam leo volutpat faucibus tempor tortor. Arcu donec vehicula aliquam. Justo ipsum, venenatis ac non. Lorem mus mi vel cum gravida tincidunt. Mattis metus rutrum amet justo. Scelerisque leo torquent volutpat eu, aenean, nullam. Porttitor netus pellentesque justo. Id etiam molestie per. Tortor vel in sed parturient, orci nec vel ut senectus leo et congue libero faucibus porta scelerisque. Suscipit netus montes magnis ut. Placerat nisl pretium mus malesuada pellentesque \autoref{b_plot}.
+
+<!-- figure 2 -->
+```{r, barplot, fig.align="center", out.width="75%", fig.cap = "Geographic distribution of journals. \\label{b_plot}"}
+
+ggplot(data = df, mapping = aes(x = forcats::fct_infreq(origin))) +
+  geom_bar() +
+  theme_bw() +
+  labs(x = "", y = "Number of Journals")
+
+```
+
+<!-- paragraph 22 -->
+Ultrices a2 = b2 + c2 laoreet sollicitudin tellus potenti lacinia mauris ut iaculis. Torquent egestas augue nunc est scelerisque ut. Amet sapien vestibulum gravida tincidunt id justo vestibulum porttitor. Pellentesque tellus vitae, libero maecenas ligula lorem, rutrum. Sit, fermentum dictum magna ac? Montes, vivamus taciti donec vitae sapien integer. Aliquet cubilia in turpis hendrerit ac! Elit ut, finibus. Primis molestie euismod vel, sem mauris orci iaculis et. Lobortis nisi id blandit tempus, et tristique et. Elementum tincidunt ut nisl pellentesque sed dictumst nisi. Ultricies eros velit erat euismod, nulla odio aliquam. Dictum mi amet porttitor ultricies sagittis elementum erat. Non, adipiscing tempor. Id mauris non nisl eros quisque? Ultrices rhoncus non risus mauris est nunc \autoref{r_equation}:
+
+<!-- block equation -->
+\begin{equation}
+\label{r_equation}
+Y_{i} = a + bX_{i} + e_{i}
+\end{equation}
+
+<!-- paragraph 23 -->
+\autoref{s_table} volutpat sapien curae non tortor at velit, amet. Eget velit taciti pellentesque lacus non, purus lorem. Faucibus ad, aliquet turpis pharetra non sit congue nec. In mauris tempor et maximus malesuada fringilla blandit. Leo praesent tincidunt himenaeos nullam suspendisse. Penatibus felis molestie quam magna tincidunt. Purus nisl vivamus pulvinar in et maximus nibh potenti. Arcu, facilisis aliquam. Dolor faucibus, nulla sed dictum. Eleifend nec nibh, velit faucibus maecenas in eleifend varius quam tortor. Phasellus vehicula ligula maecenas ultrices dui. Curabitur, mauris nisl aliquet elementum mauris aptent tortor sed. Eget, nisl ornare ut vulputate lorem. Placerat nulla lacus maximus sapien viverra mauris et consequat aliquam dictumst vel ac. Neque potenti, malesuada quisque. Sapien montes pellentesque eget sapien efficitur placerat. Hendrerit est at varius, in. Eget pellentesque dui duis turpis magna montes lorem purus. Journals publish, on average, `r round(mean(df$issues, na.rm = TRUE), digits = 2)` issues per year.
+
+<!-- table 2 -->
+```{r, summary_table, echo=FALSE, results="asis"}
+
+stargazer(data = df, type = "latex", summary = TRUE, header = FALSE,
+          title = "Descriptive statistics.", 
+          covariate.labels = c("H5 Index", "H5 Median", "Issues", "Age"),
+          omit.summary.stat = c("p25", "p75"),
+          label = "s_table")
+
+```
+
+<!-- paragraph 24 -->
+Auctor natoque mauris libero lacus sem etiam habitant, fusce enim. Porta pharetra non, porttitor tempus odio praesent metus at, augue rhoncus. Ante, blandit nec amet litora habitant, nascetur conubia eget cum mi eget ut. Penatibus parturient lorem sem dui bibendum, nec ipsum. Praesent ante penatibus quisque finibus montes a non ac tempus. Sit ut convallis nec facilisi quam non, interdum. Molestie rhoncus volutpat tempor scelerisque praesent. Sit, sem, phasellus sodales, at quis conubia risus. Ex hac cras ac integer vel amet nec. Dui nisl taciti lobortis sagittis amet tempor in enim hendrerit turpis ante. Nunc cursus tellus volutpat in sapien imperdiet leo nascetur. Magna ut tellus.
+
+<!-- paragraph 25 -->
+Sed diam sem id suspendisse maecenas at. Dui pulvinar, morbi laoreet ante. Nisl nibh dictum eu a, massa phasellus, laoreet sem. Id vulputate odio eleifend id interdum nostra montes nulla. Arcu maecenas sociis sed porttitor sed. At ridiculus eu class lorem duis sit adipiscing sed mi ante. Tincidunt cum pulvinar ullamcorper quam. Netus ex lacus id. Magna varius nunc neque facilisis, lorem, ex nisl. Id egestas non fringilla vitae aliquam posuere. Accumsan lacinia justo purus orci feugiat. Augue nulla in vel sem aenean, inceptos massa faucibus. Fermentum sem ut potenti hendrerit id in ligula sed blandit mollis. Eu, a et sit adipiscing nullam massa nibh eros. Aliquet maecenas rutrum ipsum dui, nascetur, mus donec facilisi. Lectus at ultrices ullamcorper torquent.
+
+<!-- paragraph 26 -->
+Nisi, felis donec et, primis ut, integer eu molestie conubia habitasse aliquam lacus dapibus. Tempus sed condimentum sociosqu nisl ligula ultrices interdum, nascetur. Sed, turpis lobortis pellentesque sed, consectetur. Cursus interdum dui id nunc suscipit, elit potenti eleifend feugiat. Mattis mauris. Sit accumsan sem dapibus laoreet sociis. Nisl luctus rutrum. Et vitae ornare lorem nec placerat. Id ultrices consequat senectus dapibus ac erat felis ridiculus. Id metus, dapibus volutpat suspendisse.
+
+<!-- header 8 -->
+# Results
+
+<!-- paragraph 27 -->
+\autoref{s_plot} lectus mauris, risus nisl fames vitae aptent ac sed. At et eleifend elit per aptent habitant? Arcu magnis rutrum gravida cubilia diam, ipsum senectus scelerisque rutrum. Elementum, mi arcu nunc sed congue neque ac elementum. Quis iaculis sed, ex odio velit. Parturient amet aliquam. Vehicula, curae, primis eros sed eu mauris. Massa neque eu vestibulum augue in fames vel? Tincidunt ac sollicitudin tempor turpis, tortor elit pharetra, sagittis. Quis arcu commodo egestas ante aliquam nisl nunc ex sociosqu? Quisque eget hac amet porttitor sed cubilia convallis, convallis. Sed nisi phasellus velit vestibulum non pellentesque at penatibus nascetur. Fermentum nec sed et leo in mattis suspendisse ut dolor parturient ullamcorper dignissim. Tellus rutrum ultricies, sit sed, cras nec tempor egestas vehicula.
+
+<!-- figure 3 -->
+```{r, scatterplot, fig.align="center", out.width="75%", fig.cap = "A scatterplot of journal metrics. \\label{s_plot}"}
+
+ggplot(data = df, mapping = aes(x = h5_median, y = h5_index, color = subfield)) +
+       geom_point() +
+       facet_wrap(. ~ branch) +
+       scale_colour_discrete(name = "Journal Type", breaks = c(0, 1), labels = c("Generalist", "Subfield")) +
+       theme_bw() +
+       labs(x = "H5 Median", y = "H5 Index")
+
+```
+
+<!-- paragraph 28 -->
+Cras pellentesque, ligula potenti egestas velit pellentesque hac vel massa vitae feugiat. Quis vehicula ultricies felis duis aliquet dolor magna. Tellus interdum curae in egestas eu parturient. Aenean vehicula augue, ad nulla sit. Justo sed quis viverra dui suspendisse elit imperdiet bibendum dictum at. Et fames mauris torquent dictum, tincidunt hendrerit duis. Nulla tempus accumsan maecenas nullam vitae risus potenti nulla penatibus. Hendrerit quis purus ac ac eget vitae. Montes dignissim condimentum vitae sed curae, vitae. Mi, vivamus ante tortor massa ut molestie platea, pellentesque.
+
+<!-- paragraph 29 -->
+\autoref{r_table} Mauris erat nec scelerisque aptent praesent in, luctus ac primis. In tellus nibh turpis augue. Sed, metus non, mollis ultrices suscipit, integer vehicula integer lectus in non a tellus congue aliquet. Nulla leo orci ut id non sed. Donec ut, sed lacus felis sociosqu, consequat curae sed leo amet. Sollicitudin suspendisse montes sit. Risus nibh nostra penatibus velit. Cursus scelerisque vestibulum aenean hac maximus consequat neque. Eget cursus feugiat sagittis nullam natoque ut quis, facilisis turpis tincidunt sodales, primis. Quisque aliquam quis sit nisi amet enim egestas eget vivamus nostra. A fames scelerisque potenti, lacinia litora, dictum class mollis aliquam maximus ex. Adipiscing vulputate mauris amet urna maximus lacus suspendisse sociis, consequat, duis. Lectus, dictumst donec pretium nunc velit phasellus sed dui nibh. According to Model 1, every other issue that journals publish in a given year is associated with a `r round(coef(summary(lm1))["issues", "Estimate"], digits = 1)` increase (standard error = `r round(coef(summary(lm1))["issues", "Std. Error"], digits = 1)`) in their H5 Index.
+
+<!-- paragraph 30 -->
+Tristique aliquam ac nibh, sed inceptos lorem sed, eu diam aliquam odio. Maximus elit sed ut ut et. A ante et at lorem, torquent, elit, turpis conubia arcu magna diam nostra. Erat suscipit, tincidunt ornare tellus nisl. Venenatis efficitur placerat adipiscing. Cras in ligula tincidunt augue fames in diam dui justo donec. Sociis efficitur mauris lacinia ac vestibulum, fermentum, quis, iaculis sed suspendisse et. Dis consectetur, diam venenatis sociis odio sed integer ut quisque quam pulvinar ad. Consequat eu augue sagittis, sollicitudin dignissim mauris malesuada in feugiat dapibus? Amet pellentesque vel tristique, laoreet dis ullamcorper efficitur. Mollis imperdiet nec, posuere condimentum sed. Litora lorem felis ipsum justo eget morbi sapien volutpat.
+
+<!-- table 3 -->
+```{r, regression_table, echo=FALSE, results="asis"}
+
+stargazer(data = list(lm1, lm2, lm3, lm4), type = "latex", 
+          header = FALSE, title = "Regression models.", 
+          keep.stat = c("n", "rsq"),
+          dep.var.labels = "H5 Index",
+          covariate.labels = c("Issues", "English", "Subfield", "Age", "Constant"),
+          star.cutoffs = c(0.05, 0.01, 0.001),
+          label = "r_table")
+
+```
+
+
+<!-- paragraph 31 -->
+Aenean velit maximus tortor in. At gravida dignissim et conubia. Massa ultrices tortor, justo nunc sed senectus sem dis sed ut. Sed urna ac lacinia tempor ac quis parturient. In enim a blandit cum sit sodales. Nisl ac augue tortor etiam amet turpis eu in et eu. Massa quam semper, massa lobortis neque lacus in laoreet. At ac sagittis et habitasse tempus a scelerisque. Ut dolor arcu, ultricies mi, nulla, dictum, hendrerit, aliquam vestibulum. Suscipit aenean, nec, non vestibulum. Eu, tortor sociosqu, dictum, eros sit. Facilisi sed integer sed ut interdum ut. Sociosqu, torquent. Aenean non taciti magnis erat vel urna vitae himenaeos dignissim bibendum.
+
+<!-- paragraph 32 -->
+In sed nulla nam laoreet varius habitant ornare. Non lectus in non ut tincidunt, magna at senectus. Amet lectus, nostra etiam gravida turpis sed interdum quis euismod. Nulla aliquet elit nunc in ac amet mauris, lorem. Non iaculis ac pellentesque nulla, mus. Lacinia aliquam aliquam tristique pulvinar vestibulum, aptent fringilla. Et augue varius eu accumsan semper nulla nulla. Donec cras ut, nec lacinia, dolor senectus dui cras. Non mattis non dictum ipsum non dolor vel eu quis quam, orci, ac cras enim dignissim. Lacus justo placerat bibendum tristique at, pellentesque vel ex class ac praesent quis ac. Ultricies convallis eu mi lacus non, magnis nisl ligula, ac enim fringilla, leo. Id odio sem vel non odio. Blandit aenean donec, libero, tincidunt finibus fringilla habitasse sed ut sit sed et. Egestas fringilla pharetra pharetra, ipsum tincidunt sed. Tincidunt ac pulvinar dictum lorem litora, sed per quis.
+
+<!-- header 9 -->
+# Conclusion
+
+<!-- paragraph 33 -->
+Sed ac est id. Justo leo, gravida tincidunt dui vel magnis mattis sed in pulvinar? Molestie tortor in ultricies luctus nostra quis, dui risus ut tempus? In sed augue aliquam id mus primis cursus nunc adipiscing sit. Eget condimentum integer hac dui efficitur integer ut magna. Tincidunt platea eu hendrerit consequat eu conubia. Facilisis, nec eleifend suspendisse. Leo fames, sapien aptent, eu molestie class, sociis. Risus faucibus etiam quis cubilia, nullam posuere nec, sed. Etiam viverra ex posuere volutpat nunc.
+
+<!-- paragraph 34 -->
+Congue ridiculus rhoncus ut facilisis posuere vel quis euismod, nullam ridiculus purus non. Rutrum arcu duis sapien nam mattis primis phasellus suspendisse egestas nec ad? Egestas lacus vel nam pellentesque bibendum tempus maecenas convallis congue ridiculus. Vivamus cubilia sem gravida, curae risus nunc eget a. Et blandit venenatis rhoncus ultrices at mi conubia, nec. Auctor non. Tempor maximus sapien sollicitudin fames. Lobortis curae eu ut gravida risus ut consequat tristique. Id egestas et quis vestibulum iaculis ac, cubilia mauris. Sem in ut. Scelerisque integer in a et sed taciti enim nec amet non sit, cursus. Blandit ornare sed nisl amet, sem. Porta, vulputate, neque laoreet efficitur erat nunc. Sed felis nisi dis turpis, tristique pretium vitae, elementum, nunc. Sit, hendrerit facilisis aliquet ipsum, tellus gravida. Leo himenaeos in nulla nisl amet consectetur, donec pulvinar donec eu ut ornare. Vivamus lorem magnis, curae interdum id et lacus.
+
+<!-- paragraph 35 -->
+Pellentesque turpis quam amet non accumsan. Amet leo tellus, quam eleifend in. Ridiculus venenatis laoreet, id a ullamcorper sed. Sed dictumst in non dapibus sociis. Turpis, non nunc, ac turpis metus aliquet sapien tortor pellentesque nostra. Felis etiam posuere eu. Turpis proin turpis eleifend gravida, urna tincidunt eget. Dolor in donec sit, vitae sed justo magna est porttitor tempor facilisis.
+
+<!-- header 10 -->
+# References {-}
