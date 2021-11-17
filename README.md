@@ -21,11 +21,11 @@ The workshop is divided into ten parts. Most parts include exercises &mdash; 40+
 
 The slides for the workshop are available to view at <https://resulumit.com/teaching/rmd_workshop.html>. These HTML slides are created with `xaringan` package (Xie, 2020).
 
-See the `presentation` directory of this repository for the source files underlying the slides. The same directory also includes the [PDF version of the slides](https://github.com/resulumit/rmd_workshop/blob/master/presentation/rmd_workshop.pdf), which might come handly if the HTML version is too large for your browser to function. This is indeed a known problem for some Safari users.
+See the `presentation` directory for the source files underlying the slides. The same directory also includes the [PDF version of the slides](https://github.com/resulumit/rmd_workshop/blob/master/presentation/rmd_workshop.pdf), which might come handly if the HTML version is too large for your browser to function --- as it is for some Safari users.
 
 ##  Materials
 
-The remaining workshop materials are available in a separate branch of this repository, called [materials](https://github.com/resulumit/rmd_workshop/tree/materials). It includes the following:
+The remaining materials are available in a separate branch of this repository, called [materials](https://github.com/resulumit/rmd_workshop/tree/materials). It includes the following:
 
 - `manuscript\reproduce_this.pdf`
     - a document, formatted in Word but saved as PDF, to be re-created with R Markdown 
@@ -37,6 +37,10 @@ The remaining workshop materials are available in a separate branch of this repo
     - an R Markdown document to work on during the workshop
         - includes unformatted text from `reproduce_this.pdf` to save time
         - major components, such as paragraphs and tables, are numbered and marked in comments to facilitate navigation
+   
+- `manuscript\solutions.Rmd`
+    - an R Markdown file with all exercises are completed
+        - this is how participants' `journals.Rmd` file should look at the end of the workshop
         
 - `manuscript\references.bib` 
     - a BibTeX document with three fabricated references
@@ -60,16 +64,7 @@ The remaining workshop materials are available in a separate branch of this repo
         - **issues**: number of issues published per year (integers)
    
 - `image\google_scholar.png`
-    - a screeenshot image of the Google Scholar homapage, copyright Google, LLC 
-        
-- `test\run_this.R`
-    - an R script that 
-        - installs the packages needed for the workshop
-        - attempts to knit an R Markdown into PDF file
-    - useful for tasking participants with a pre-workshop setup
-        
-- `test\the_test.Rmd`
-    - an R Markdown file, to be used for the attempt in `test\run_this.R`
+    - a screeenshot image of the Google Scholar homapage, copyright Google, LLC
 
  
 ## References
