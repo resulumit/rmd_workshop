@@ -20,12 +20,14 @@ class: inverse, center, middle
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE, crayon.enabled = TRUE)
 
-library(crayon)
-library(fansi)
-library(dplyr)
-library(ggplot2)
-library(stargazer)
+library(bibtex)
 library(countdown)
+library(crayon)
+library(dplyr)
+library(fansi)
+library(ggplot2)
+library(RefManageR)
+library(stargazer)
 
 # data
 df <- read.csv("rmd_workshop_files/images_data/journals.csv") %>% 
@@ -40,7 +42,31 @@ lm2 <- lm(h5_index ~ issues + english, data = df)
 lm3 <- lm(h5_index ~ issues + english + subfield, data = df)
 lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
+# references
+packages <- c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2", 
+              "base", "fabricatr", "data.table", "stringi", "huxtable", 
+              "plotly", "knitr", "bookdown", "blogdown", "kableExtra")
+
+knitr::write_bib(packages, "rmd_workshop_files/bibliography/packages.bib")
+
+bib_files <- c("rmd_workshop_files/bibliography/packages.bib", 
+               "rmd_workshop_files/bibliography/manuals.bib")
+bib_data <- lapply(bib_files, readLines)
+write(unlist(bib_data),
+      file = "rmd_workshop_files/bibliography/presentation.bib")
+
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = "to.doc",
+           dashed = FALSE)
+
+bibliography <- ReadBib("rmd_workshop_files/bibliography/presentation.bib", 
+                        check = FALSE)
+
 ```
+
 
 <style type="text/css">
 
@@ -484,7 +510,7 @@ class: action
     
 .footnote[
 
-<sup>*</sup> The text, _Lorem ipsum_, is generated with the `stringi` package ([Gagolewski, 2021](https://cran.r-project.org/web/packages/stringi/index.html)) while the dataset is created with the `fabricatr` package ([Blair et al., 2021](https://cran.r-project.org/web/packages/fabricatr/index.html)). 
+<sup>*</sup> The text, _Lorem ipsum_, is generated with the `stringi` package `r Citep(bibliography, "R-stringi")` while the dataset is created with the `fabricatr` package `r Citep(bibliography, "R-fabricatr")`. 
 
 ]
 
@@ -517,7 +543,7 @@ class: action
 ## Course Materials &mdash; Contents  
 
 `data\journals.csv`
-- a dataset created with the `fabricatr` package ([Blair et al., 2021](https://cran.r-project.org/web/packages/fabricatr/index.html)), imagined to explore the `Google Scholar` rankings of fictitious journals
+- a dataset created with the `fabricatr` package `r Citep(bibliography, "R-fabricatr")`, imagined to explore the `Google Scholar` rankings of fictitious journals
     
 - includes the following variables 
     - **name**: journals (1090 random titles)
@@ -628,15 +654,25 @@ class: action
 ## R Packages &mdash; Install from within RStudio
 
 ```{r eval=FALSE, tidy=FALSE}
+install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+
+tinytex::install_tinytex()
+
+```
+
+---
+class: action
+
+## R Packages &mdash; Install from within RStudio
+
+```{r eval=FALSE, tidy=FALSE}
 install.packages(c(`"rmarkdown"`, "tinytex", "dplyr", "stargazer", "ggplot2"))
 
 tinytex::install_tinytex()
 
 ```
 
---
-
-- `rmarkdown` ([Allaire et al., 2021](https://cran.r-project.org/web/packages/rmarkdown/index.html)), for automating the process of converting R Markdown documents into other formats
+- `rmarkdown` `r Citep(bibliography, "R-rmarkdown")`, for automating the process of converting R Markdown documents into other formats
 
 ---
 class: action
@@ -650,9 +686,9 @@ tinytex::install_tinytex() #<<
 
 ```
 
-- `rmarkdown` ([Allaire et al., 2021](rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html)), for automating the process of converting R Markdown documents into other formats
+- `rmarkdown` `r Citep(bibliography, "R-rmarkdown")`, for automating the process of converting R Markdown documents into other formats
 
-- `tinytex` ([Xie, 2021a](https://cran.r-project.org/web/packages/tinytex/index.html)), for PDF outputs
+- `tinytex` `r Citep(bibliography, "R-tinytex")`, for PDF outputs
     - requires an additional step to install
     - alternative: a TeX/LaTeX system installed on your computer
 
@@ -669,8 +705,8 @@ tinytex::install_tinytex()
 ```
 
 
-- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
-    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
+- `dplyr` `r gsub("Ã§", "ç", Citep(bibliography, "R-dplyr"))`, for data manipulation
+    - popular alternative: e.g., `base` `r Citep(bibliography, "R-base")`, `data.table` `r Citep(bibliography, "R-data.table")`
 
 ---
 class: action
@@ -685,11 +721,11 @@ tinytex::install_tinytex()
 ```
 
 
-- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
-    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
+- `dplyr` `r gsub("Ã§", "ç", Citep(bibliography, "R-dplyr"))`, for data manipulation
+    - popular alternative: e.g., `base` `r Citep(bibliography, "R-base")`, `data.table` `r Citep(bibliography, "R-data.table")`
     
-- `stargazer` ([Hlavac, 2018](https://cran.r-project.org/web/packages/stargazer/index.html)), for tables
-    - popular alternatives: `knitr` ([Xie, 2021b](https://cran.r-project.org/web/packages/knitr/index.html)), `kableExtra` ([Zhu, 2021](https://cran.r-project.org/web/packages/kableExtra/index.html)), `huxtable` ([Hugh-Jones, 2021](https://cran.r-project.org/web/packages/huxtable/index.html))
+- `stargazer` `r Citep(bibliography, "R-stargazer")`, for tables
+    - popular alternatives: `knitr` `r Citep(bibliography, "R-knitr")`, `kableExtra` `r Citep(bibliography, "R-kableExtra")`, `huxtable` `r Citep(bibliography, "R-huxtable")`
     
 ---
 class: action
@@ -703,14 +739,14 @@ tinytex::install_tinytex()
 
 ```
 
-- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
-    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
+- `dplyr` `r gsub("Ã§", "ç", Citep(bibliography, "R-dplyr"))`, for data manipulation
+    - popular alternative: e.g., `base` `r Citep(bibliography, "R-base")`, `data.table` `r Citep(bibliography, "R-data.table")`
     
-- `stargazer` ([Hlavac, 2018](https://cran.r-project.org/web/packages/stargazer/index.html)), for tables
-    - popular alternatives: `knitr` ([Xie, 2021b](https://cran.r-project.org/web/packages/knitr/index.html)), `kableExtra` ([Zhu, 2021](https://cran.r-project.org/web/packages/kableExtra/index.html))
+- `stargazer` `r Citep(bibliography, "R-stargazer")`, for tables
+    - popular alternatives: `knitr` `r Citep(bibliography, "R-knitr")`, `kableExtra` `r Citep(bibliography, "R-kableExtra")`, `huxtable` `r Citep(bibliography, "R-huxtable")`
     
-- `ggplot2` ([Wickham et al., 2021b](https://cran.r-project.org/web/packages/ggplot2/index.html)), for figures
-    - popular alternatives: `base`, `plotly` ([Sievert et al., 2021](https://cran.r-project.org/web/packages/plotly/index.html))
+- `ggplot2` `r Citep(bibliography, "ggplot2")`, for figures
+    - popular alternatives: `base` `r Citep(bibliography, "R-base")`, `plotly` `r Citep(bibliography, "R-plotly")`
 
 ---
 class: action
@@ -756,13 +792,13 @@ Downloading process can be initiated from within RStudio
 
 <br>
 
-- R Markdown: The Definitive Guide ([Xie et al., 2021a](https://bookdown.org/yihui/rmarkdown))
+- R Markdown: The Definitive Guide `r Citep(bibliography, "rmarkdown2018")`
 
    - open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/)
     
 <br>
 
-- R for Data Science ([Wickham and Grolemund, 2021](https://r4ds.had.co.nz/))
+- R for Data Science `r Citep(bibliography, "rfordatascience")`
   
    - open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/)
    
@@ -931,8 +967,8 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 - R Markdown can produce more than documents,<sup>*</sup> including
 
   - presentations, again with `rmarkdown`
-  - books, with `bookdown` ([Xie, 2021c](https://cran.rstudio.com/web/packages/bookdown/index.html))
-  - websites, with `blogdown` ([Xie et al., 2021b](https://cran.r-project.org/web/packages/blogdown/index.html))
+  - books, with `bookdown` `r Citep(bibliography, "R-bookdown")`
+  - websites, with `blogdown` `r Citep(bibliography, "R-blogdown")`
   
 .footnote[
 
@@ -4548,9 +4584,9 @@ R Markdown produces outputs with single-line-spaced text while we might prefer o
 
 #### Solution:
 
-Use the `doublespacing` command from the LaTeX package `setspace` (Carlisle et al., 2011)
+Use the `doublespacing` command from the LaTeX package `setspace` `r Citep(bibliography, "setspace")`
 - because the command comes from a package, we need to add it to YAML with `header-includes`
-- including commands in YAML ensures they are applied throught the output<sup>*</sup>  
+- including commands in YAML ensures they are applied through the output<sup>*</sup>  
 
 ```yaml
 ---
@@ -5534,47 +5570,53 @@ class: inverse, center, middle
 ---
 ## References
 
-Allaire, J. J., Xie, Y., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W. and Iannone, R. (2021). [rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html). R package, version 2.11.
+```{r echo=FALSE, warning=FALSE, results="asis"}
 
-Blair, G., Cooper, J., Coppock, A., Humphreys, M., Rudkin, A. and Fultz, N. (2021). [fabricatr: Imagine your data before you collect it](https://cran.r-project.org/web/packages/fabricatr/index.html). R package, version 0.14.0.
-
-Carlisle, D., Fairbairns, R., Harris, E. and Tobin, G. (2011). [setspace – Set space between lines](https://ctan.org/pkg/setspace). LaTeX package, version 6.7a.
-
-Dowle, M. and Srinivasan, A. (2021). [data.table: Extension of 'data.frame'](https://cran.r-project.org/web/packages/data.table/index.html). R package, version 1.14.2.
-
-Gagolewski, M. (2021). [stringi: Character String Processing Facilities](https://cran.r-project.org/web/packages/stringi/index.html). R package, version 1.7.5.
-
-Hlavac, M. (2018). [stargazer: Well-formatted regression and summary statistics tables](https://cran.r-project.org/web/packages/stargazer/index.html). R package, version 5.2.2.
-
-Hugh-Jones, D. (2021).[huxtable: Easily Create and Style Tables for LaTeX, HTML and Other Formats](https://cran.r-project.org/web/packages/huxtable/index.html). R package, version 5.4.0.
-
-Sievert, C., Parmer, C.,  Hocking, T., Chamberlain, S., Ram, K., Corvellec, M., & Despouy, P. (2021). [plotly: Create Interactive Web Graphics via 'plotly.js'](https://cran.r-project.org/web/packages/plotly/index.html). R package, version 4.10.0.
+capture.output({
+  
+PrintBibliography(bibliography, .opts = list(style = "text"), 
+                  start = 1, end = 7)
+  
+}) %>%
+  { gsub("<URL:", "", ., fixed = TRUE) } %>%
+  { gsub(">", "", ., fixed = TRUE) } %>%
+  { gsub("Ã§", "ç", ., fixed = TRUE) } %>%
+  cat(sep="\n")
+```
 
 ---
 ## References
 
-Wickham, H. and Grolemund, G. (2021). R for data science. O'Reilly. Open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/).
+```{r echo=FALSE, warning=FALSE, results="asis"}
 
-Wickham, H., François, W., Henry L. and Müller, K.(2021a). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 1.0.7.
+capture.output({
 
-Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., Yutani, H. and Dunnington, D. (2021b). [ggplot2: Create elegant data visualisations using the grammar of graphics](https://cran.r-project.org/web/packages/ggplot2/index.html). R package, version 3.3.5.
+PrintBibliography(bibliography, .opts = list(style = "text"), 
+                  start = 8, end = 14)
+}) %>%
+  { gsub("<URL:", "", ., fixed = TRUE) } %>%
+  { gsub(">", "", ., fixed = TRUE) } %>%
+  { gsub("Ã§", "ç", ., fixed = TRUE) } %>%
+  cat(sep="\n")
 
-Wiernik, B. M. (2020). [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand). Citation style language file, version 1.0.
-
-Xie, Y. (2021a). [tinytex: Helper functions to install and maintain TeX Live and compile LaTeX documents](https://cran.r-project.org/web/packages/tinytex/index.html). R package, version 0.34.
-
-Xie, Y. (2021b). [knitr: A general-purpose package for dynamic report generation in R](https://cran.r-project.org/web/packages/knitr/index.html). R package, version 1.36.
-
-Xie, Y. (2021c). [bookdown: Authoring books and technical documents with R Markdown](https://cran.rstudio.com/web/packages/bookdown/index.html). R package, version 0.24.
-
-Xie, Y., Allaire, J. J., and Grolemund, G. (2021a). R markdown: The definitive guide. CRC Press. Open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/).
+```
 
 ---
 ## References
 
-Xie, Y, Dervieux, C. Presmanes Hill, A. (2021b). [blogdown: Create blogs and websites with R Markdown](https://cran.r-project.org/web/packages/blogdown/index.html). R package, version 1.5.
+```{r echo=FALSE, warning=FALSE, results="asis"}
 
-Zhu, H. (2021). [kableExtra: Construct Complex Table with 'kable' and Pipe Syntax](https://cran.r-project.org/web/packages/kableExtra/index.html). R package, version 1.3.4.
+capture.output({
+  
+PrintBibliography(bibliography, .opts = list(style = "text"), 
+                  start = 15, end = 22)
+}) %>%
+  { gsub("<URL:", "", ., fixed = TRUE) } %>%
+  { gsub(">", "", ., fixed = TRUE) } %>%
+  { gsub("Ã§", "ç", ., fixed = TRUE) } %>%
+  cat(sep="\n")
+
+```
 
 ---
 class: middle, center
