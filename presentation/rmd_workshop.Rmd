@@ -804,7 +804,7 @@ Downloading process can be initiated from within RStudio
    
 .footnote[
 
-<sup>*</sup> During the workshop, [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
+<sup>*</sup> During the workshop, [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/main/rmarkdown-2.0.pdf) is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
 
 ]
 
@@ -1019,7 +1019,7 @@ output:
 <br>
     - the list of available variables, as well as options and sub-options for these variables, depends on the output format
        - [Pandoc User's Guide](https://pandoc.org/MANUAL.html) provides a comprehensive documentation
-       - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) provides a helpful list
+       - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/main/rmarkdown-2.0.pdf) provides a helpful list
 
 - Typical YAML variables for an research paper are as follows:
 
@@ -1225,7 +1225,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
 
 .footnote[
 
-<sup>*</sup> For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. See [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf).
+<sup>*</sup> For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. See [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/main/rmarkdown-2.0.pdf).
 
 ]
 
@@ -1571,7 +1571,7 @@ class: action
 <br>
 
 3) Add and set a completely new variable not covered so far
--  see, for example, the [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+-  see, for example, the [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/main/rmarkdown-2.0.pdf)
 
 <br>
 
@@ -1605,7 +1605,7 @@ class: inverse, center, middle
 - R Markdown follows the syntax in Pandoc's Markdown 
 
    - for the complete rules of the syntax, see [Pandoc User's Guide](https://pandoc.org/MANUAL.html)
-   - for a useful summary of the syntax, see the [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+   - for a useful summary of the syntax, see the [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/main/rmarkdown-2.0.pdf)
    
 ---
 ## Syntax &mdash; Lines
@@ -2708,7 +2708,7 @@ Note that
   - with this option and value, nothing from this chunk will be included in the output document
 
 - The complete list of options is available at <https://yihui.org/knitr/options>
-  - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) provides a helpful list as well
+  - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/main/rmarkdown-2.0.pdf) provides a helpful list as well
   
 - leaving spaces around the equal sign <span style="background-color: #ffff88;">=</span>, between option tags and values, should be avoided
   - such spaces might lead to errors    
