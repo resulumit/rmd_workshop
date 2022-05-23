@@ -2,7 +2,7 @@
 title: "Writing Reproducible Research Papers with R Markdown"
 subtitle: "Resul Umit"
 institute: ""
-date: "November 2021"
+date: "May 2022"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -130,7 +130,7 @@ bibliography <- ReadBib("rmd_workshop_files/bibliography/presentation.bib",
 
 ### Resul Umit
 
-### 1 November 2021
+### 24 May 2022
 
 .footnote[
 
@@ -450,33 +450,6 @@ class: inverse, center, middle
 ]
 
 ---
-## Course Materials &mdash; Overview
-
-Materials, available at <https://github.com/resulumit/rmd_workshop/tree/materials>, have the following structure
-
-```
-
-rmd_workshop-materials
-   |
-   |- manuscript
-   |  |
-   |  |- reproduce_this.pdf
-   |  |- journals.Rmd
-   |  |- references.bib
-   |  |- apa_7th.csl
-   |
-   |- data
-   |  |
-   |  |- journals.csv
-   |
-   |- image
-   |  |
-   |  |- google_scholar.png
-   
-   
-```
-
----
 name: download-zip
 class: action
 
@@ -498,7 +471,35 @@ class: action
   - rename the folder as `YOURNAME-rmd`
      - e.g., `resul-rmd`
      - this will come handy when we collaborate [Part 9](#part9)
-  
+
+---
+## Course Materials &mdash; Overview
+
+Notice that the folder has the following structure
+
+
+```
+
+YOURNAME-rmd
+   |
+   |- manuscript
+   |  |
+   |  |- reproduce_this.pdf
+   |  |- journals.Rmd
+   |  |- references.bib
+   |  |- apa_7th.csl
+   |
+   |- data
+   |  |
+   |  |- journals.csv
+   |
+   |- image
+   |  |
+   |  |- google_scholar.png
+   
+   
+```
+
 ---
 ## Course Materials &mdash; Contents
 
@@ -599,6 +600,29 @@ class: action
 
 - Download RStudio from [https://rstudio.com/products/rstudio/download](https://rstudio.com/products/rstudio/download)
     - choose the free version
+
+---
+class: action
+name: rstudio-project
+
+## RStudio Project &mdash; Create from within RStudio 
+
+- RStudio allows for dividing your work with R into separate projects, each with own history etc.
+
+  - [this page](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) has more information on why projects are recommended
+
+<br>
+
+- Create a new RStudio project for the existing<sup>*</sup> workshop directory `...\YOURNAME-rmd` from the RStudio menu:
+
+> `File -> New Project -> Existing Directory -> Browse -> ...\YOURNAME-rmd -> Open`
+
+
+.footnote[
+
+<sup>*</sup> Recall that we have downloaded this earlier from GitHub. [Back to the relevant slide](#download-zip).
+
+]
 
 ---
 ## RStudio &mdash; R Markdown Options
@@ -747,29 +771,6 @@ tinytex::install_tinytex()
     
 - `ggplot2` `r Citep(bibliography, "ggplot2")`, for figures
     - popular alternatives: `base` `r Citep(bibliography, "R-base")`, `plotly` `r Citep(bibliography, "R-plotly")`
-
----
-class: action
-name: rstudio-project
-
-## RStudio Project &mdash; Create from within RStudio 
-
-- RStudio allows for dividing your work with R into separate projects, each with own history etc.
-
-  - [this page](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) has more information on why projects are recommended
-
-<br>
-
-- Create a new RStudio project for the existing<sup>*</sup> workshop directory `...\YOURNAME-rmd` from the RStudio menu:
-
-> `File -> New Project -> Existing Directory -> Browse -> ...\YOURNAME-rmd -> Open`
-
-
-.footnote[
-
-<sup>*</sup> Recall that we have downloaded this earlier from GitHub. [Back to the relevant slide](#download-zip).
-
-]
 
 ---
 class: action
