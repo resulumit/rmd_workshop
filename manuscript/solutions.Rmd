@@ -50,7 +50,7 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 # Abstract {-}
 
 <!-- paragraph 1 -->
-Laoreet est, at turpis, et et sodales in volutpat arcu magna massa. At, rutrum felis fringilla. Turpis aliquam ante dictum, viverra. Aliquam velit auctor efficitur nascetur diam. Quis eu donec. Auctor curabitur ut. Elementum est sed et. Curae cras ac nibh.\
+Laoreet est, at turpis, et et sodales in volutpat arcu magna massa. At, rutrum felis fringilla. Turpis aliquam ante dictum, viverra. Aliquam velit auctor efficitur nascetur diam. Quis eu donec. Auctor curabitur ut. Elementum est sed et. Curae cras ac nibh.   
 Habitant ante, dolor pharetra egestas montes ornare ut iaculis?Odio lectus quisque dapibus turpis sit, cursus in interdum in, magna sapien.Ac eget mattis, in suspendisse tempus lacinia, sed ullamcorper. Scelerisque nunc ut iaculis porta turpis bibendum pretium. Accumsan vestibulum lorem, vestibulum consequat urna eu, cum finibus nulla semper suscipit vulputate. Urna facilisis volutpat metus ut sociis vitae in lorem nibh. Ipsum vel, maximus maecenas in a. Aptent congue, rutrum nisl ridiculus at. Lectus ac tincidunt eu at netus ut, ipsum lacinia a aliquam sapien. Vel egestas purus nibh consequat orci. Dui, eu, nisi sociis enim mi et sodales purus. Quam maecenas ligula elementum neque. Sociis curae viverra lorem vitae in natoque ut.
 
 <!-- block quote -->
